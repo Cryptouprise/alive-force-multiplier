@@ -75,6 +75,7 @@ h1 span{color:var(--gold)}
 .photos a{display:block;position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--panel2);aspect-ratio:4/3}
 .photos a img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .photos a:hover img{transform:scale(1.04)}
+.photos a .cap .pill{margin-right:6px;font-size:9px;padding:2px 7px}
 .photos a .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-size:11px;font-weight:600;color:#fff}
 .pcs{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:980px}
 .pcs a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:12px;text-decoration:none;color:var(--txt)}
@@ -91,12 +92,30 @@ footer{margin-top:8px;color:var(--mut);font-size:11px;line-height:1.6}
 @media(max-width:1200px){.ads{grid-template-columns:repeat(3,1fr)}.links{grid-template-columns:repeat(2,1fr)}.photos{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:900px){header{flex-wrap:wrap}.topnav{order:3;width:100%}.wide-grid,.pcs{grid-template-columns:1fr}h1{font-size:28px}.ads{grid-template-columns:repeat(2,1fr)}.photos,.photos.cols4,.photos.cols3{grid-template-columns:repeat(2,1fr)}.vcard.full{grid-column:auto}}
 @media(max-width:560px){.ads{grid-template-columns:1fr}.links{grid-template-columns:1fr}.wrap{padding:16px 16px 32px}.phone{max-width:280px;margin:0 auto}}
+
+.pill{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:3px 9px;border-radius:999px;white-space:nowrap;line-height:1.25;vertical-align:middle}
+.pill.made{background:var(--green);color:#fff;border:1px solid rgba(61,220,132,.5)}
+.pill.theirs{background:transparent;color:#c5c9ce;border:1px solid #7a818a}
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 20px;padding:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.legend .how{color:var(--mut);font-size:13px}
+.from{font-size:11px;color:#b4bac2;font-weight:500}
+.pill-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 2px 6px}
+.shh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 6px}
+.shh h2,.shh h3{margin:0}
+.shh.part h2{font-size:22px;letter-spacing:-.3px;text-transform:none;color:var(--txt);font-weight:700}
+.lcard .pill{align-self:flex-start}
+.card h3{gap:8px;flex-wrap:wrap}
+.card h3 .pill{letter-spacing:.6px;font-weight:700}
+.pack-vids .pc .pill,.pack-links .pill{margin-top:6px;align-self:flex-start}
+.pack-links a{position:relative}
+.agent .pill{margin-left:4px}
+.brand .pill{margin-left:2px}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <div class="brand"><span class="inf">INFINITE AI</span><span class="x">×</span><img src="alive-white.png" alt="ALIVE"><span class="fm">Force Multiplier</span></div>
+  <div class="brand"><span class="inf">INFINITE AI</span><span class="x">×</span><img src="alive-white.png" alt="ALIVE"><span class="pill theirs">ALIVE's own</span><span class="fm">Force Multiplier</span></div>
   <nav class="topnav">
     <a href="index.html">Dashboard</a>
     <a href="package.html" class="on">The Package</a>
@@ -105,38 +124,172 @@ footer{margin-top:8px;color:var(--mut);font-size:11px;line-height:1.6}
 
 <p class="eyebrow">Infinite AI × ALIVE Studios</p>
 <h1>The Package. <span>Everything we made</span>, in one place.</h1>
-<p class="sub">Final cuts of every video, ALIVE’s own photos, the draft postcard, concept images, and the working docs. Built for the conversation with Brandon — and ready to share.</p>
+<p class="sub">Green labels are what Infinite AI made for this pitch. Outlined labels are ALIVE’s own photos and brand. Built for the conversation with Brandon — and ready to share.</p>
+<div class="legend">
+  <span class="how">How to read this page:</span>
+  <span class="pill made">Made by Infinite AI</span>
+  <span class="pill theirs">ALIVE's own</span>
+</div>
+
 <nav class="jump">
-  <a href="#docs">Docs &amp; links</a>
+  <a href="#we-made">What we made</a>
   <a href="#videos">Videos</a>
-  <a href="#photos">Photos</a>
   <a href="#postcard">Postcard</a>
   <a href="#muse">Concept images</a>
+  <a href="#docs">The plan</a>
+  <a href="#theirs">ALIVE today</a>
 </nav>
 
+<section class="section" id="we-made">
+  <div class="shh part"><h2>What we made for ALIVE</h2><span class="pill made">Made by Infinite AI</span></div>
+  <p class="lede">Videos, ads, the draft postcard, concept images, and the plan. Everything in this section was made by Infinite AI.</p>
+
+<section class="section" id="videos">
+  <div class="shh"><h2>Videos</h2><span class="pill made">Made by Infinite AI</span></div>
+  <p class="lede">The newest final cut of each piece. Ads are shown in the 9:16 format they’d run on Instagram, TikTok and Meta. A few also have a 16:9 cut for the website or a meeting screen.</p>
+
+  <div class="group" id="agent">
+    <div class="shh"><h3>The agent in action</h3><span class="pill made">Made by Infinite AI</span></div>
+    <p class="hint">A walkthrough of the ALIVE Growth Agent — the core of the offer.</p>
+    <div class="vcard full" id="demo">
+      <div class="frame">
+        <video controls preload="metadata" poster="posters/agent-demo.jpg" src="videos/agent-demo.mp4" playsinline></video>
+      </div>
+      <div class="meta"><h4>Agent demo</h4><span class="len">2:05 · 16:9</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+      <p class="desc">The ALIVE Growth Agent at work around Las Colinas: it finds the businesses, asks the studio to approve each batch, then works them with mail, email, texts, calls and ads. Play this in the meeting.</p>
+    </div>
+  </div>
+
+  <div class="group" id="films">
+    <div class="shh"><h3>Brand films</h3><span class="pill made">Made by Infinite AI</span></div>
+    <p class="hint">Short films about the studio itself — why ALIVE exists, and what it feels like to walk in.</p>
+    <div class="wide-grid">
+      <article class="vcard" id="why-alive">
+        <div class="frame">
+          <video controls preload="metadata" poster="posters/why-alive.jpg" src="videos/why-alive.mp4" playsinline></video>
+        </div>
+        <div class="meta"><h4>Why ALIVE</h4><span class="len">1:07 · 16:9</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+        <p class="desc">A short film about why ALIVE was created and who it’s for. It opens on “The room is part of the class.” For the website, a studio screen, or the start of a visit.</p>
+      </article>
+      <article class="vcard" id="presenter">
+        <div class="frame">
+          <video controls preload="metadata" poster="posters/ai-presenter.jpg" src="videos/ai-presenter.mp4" playsinline></video>
+        </div>
+        <div class="meta"><h4>Honest AI presenter</h4><span class="len">1:06 · 16:9</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+        <p class="desc">An AI presenter who admits it feels strange at first, then shares what members actually say — real reviews and studio ratings. Labeled AI-generated the whole way through. For paid social or a landing page.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="group" id="ads">
+    <div class="shh"><h3>Ads</h3><span class="pill made">Made by Infinite AI</span></div>
+    <p class="hint">Short social ads. A, B and C open on the same hook, then offer a free class to a different neighbor. D and E are brand and first-timer ads.</p>
+    <div class="ads">
+      <article class="ad-card" id="ad-a" data-src9="videos/ad-a-9x16.mp4" data-poster9="posters/ad-a-9x16.jpg" data-src16="videos/ad-a-16x9.mp4" data-poster16="posters/ad-a-16x9.jpg">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-a-9x16.jpg" src="videos/ad-a-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad A · 3PM offices</h4><span class="len">0:25</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+        <p class="desc">Opens “This isn’t a yoga class,” then offers nearby offices a free class for their team, timed for the afternoon slump. For Instagram, TikTok and Meta around each studio.</p>
+        <div class="seg"><button type="button" class="on" data-a="9x16">9:16</button><button type="button" data-a="16x9">16:9</button></div>
+      </article>
+      <article class="ad-card" id="ad-b">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-b-9x16.jpg" src="videos/ad-b-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad B · Resident perk</h4><span class="len">0:25 · 9:16</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+        <p class="desc">The same hook, then a free class for residents — made for property managers and apartment communities. For those inboxes and local social.</p>
+      </article>
+      <article class="ad-card" id="ad-c" data-src9="videos/ad-c-9x16.mp4" data-poster9="posters/ad-c-9x16.jpg" data-src16="videos/ad-c-16x9.mp4" data-poster16="posters/ad-c-16x9.jpg">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-c-9x16.jpg" src="videos/ad-c-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad C · Neighbor perk</h4><span class="len">0:24</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+        <p class="desc">The same hook, then a free class for people who work or live nearby. For local Meta and Instagram around each studio.</p>
+        <div class="seg"><button type="button" class="on" data-a="9x16">9:16</button><button type="button" data-a="16x9">16:9</button></div>
+      </article>
+      <article class="ad-card" id="ad-d">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-d-9x16.jpg" src="videos/ad-d-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad D · The room does the work</h4><span class="len">0:27 · 9:16</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+        <p class="desc">“Yoga, but the room does the work.” A brand ad about the heat, the video wall, and sound and light in sync. For paid social.</p>
+      </article>
+      <article class="ad-card" id="ad-e">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-e-9x16.jpg" src="videos/ad-e-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad E · First-timer</h4><span class="len">0:28 · 9:16</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div>
+        <p class="desc">For people new to hot yoga: “Never done hot yoga? Perfect. Start here.” Mentions the first 31 days at $24.99. For prospecting and retargeting.</p>
+      </article>
+    </div>
+    <p class="note">End cards still say “[booking link]” — a placeholder until ALIVE provides the real URL.</p>
+  </div>
+
+  <div class="group concept" id="concept">
+    <div class="shh"><h3>Concept <span class="tag concept">AI recreation · concept only</span></h3><span class="pill made">Made by Infinite AI</span></div>
+    <p class="hint">Not their real studio, and no real faces. A taste of how campaign creative could look, kept on the side.</p>
+    <article class="vcard" id="recreation">
+      <div class="frame">
+        <video controls preload="metadata" poster="posters/ai-recreation.jpg" src="videos/ai-recreation.mp4" playsinline></video>
+      </div>
+      <div class="meta"><h4>AI studio recreation</h4><span class="len">0:19 · 16:9</span></div>
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">AI-generated concept from ALIVE's photos</span></div>
+      <p class="desc">An AI-made walk through a studio in ALIVE’s colors, with the line “Yoga, but the room does the work.” This is a concept, not a picture of an ALIVE room.</p>
+    </article>
+  </div>
+</section>
+
+
+<section class="section" id="postcard">
+  <div class="shh"><h2>Postcard</h2><span class="pill made">Made by Infinite AI</span></div>
+  <p class="lede">The neighbor-perk mailer, front and back. Designed by Infinite AI. This is a draft.</p>
+  <div class="warn-banner">Draft: the front photo includes a child and will be swapped for a real ALIVE photo before any printing.</div>
+  <div class="pcs">
+    <a href="photos/postcard-front.jpg" data-lb="Postcard front — draft, photo will be swapped">
+      <img src="photos/postcard-front.jpg" alt="Postcard front">
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span></div>
+      <div class="cap">Front</div>
+      <div class="warn">Draft: front photo will be swapped for a real ALIVE photo.</div>
+    </a>
+    <a href="photos/postcard-back.jpg" data-lb="Postcard back">
+      <img src="photos/postcard-back.jpg" alt="Postcard back">
+      <div class="pill-row"><span class="pill made">Made by Infinite AI</span></div>
+      <div class="cap">Back</div>
+    </a>
+  </div>
+</section>
+
+
+<section class="section" id="muse">
+  <div class="shh"><h2>Concept ad images</h2><span class="pill made">Made by Infinite AI</span></div>
+  <p class="lede">Three stills from Chase’s Muse agent. Concept only — not official ALIVE photography.</p>
+  <div class="photos cols3">
+    <a href="muse/muse-1.jpg" data-lb="Concept ad image 1"><img src="thumbs/muse-1.jpg" alt="Concept ad image 1"><span class="cap"><span class="pill made">Made by Infinite AI</span> Concept 1</span></a>
+    <a href="muse/muse-2.jpg" data-lb="Concept ad image 2"><img src="thumbs/muse-2.jpg" alt="Concept ad image 2"><span class="cap"><span class="pill made">Made by Infinite AI</span> Concept 2</span></a>
+    <a href="muse/muse-3.jpg" data-lb="Concept ad image 3"><img src="thumbs/muse-3.jpg" alt="Concept ad image 3"><span class="cap"><span class="pill made">Made by Infinite AI</span> Concept 3</span></a>
+  </div>
+</section>
+
+
 <section class="section" id="docs">
-  <h2>Docs &amp; links</h2>
-  <p class="lede">The written work and source lists, ready to open.</p>
-  <div class="links">
+  <div class="shh"><h2>The plan</h2><span class="pill made">Made by Infinite AI</span></div>
+  <p class="lede">The playbook, the proposal, and the nearby-business list — written by Infinite AI.</p>
+  <div class="links" style="grid-template-columns:repeat(3,1fr)">
     <a class="lcard" href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/56a08167-d32c-416b-99a4-da3c88d7b42d" target="_blank" rel="noopener">
+      <span class="pill made">Made by Infinite AI</span>
       <span class="k">Playbook</span>
       <b>The ALIVE playbook</b>
       <p>How the local outbound engine would work around each studio.</p>
       <span class="go">Open the Page →</span>
     </a>
-    <a class="lcard" href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/dfcf7914-a65b-4c85-85f7-4e0e5bb7ea3e" target="_blank" rel="noopener">
-      <span class="k">Gallery</span>
-      <b>Full photo gallery</b>
-      <p>A wider set of ALIVE’s real photos and stills, organized for review.</p>
-      <span class="go">Open the Page →</span>
-    </a>
     <a class="lcard" href="https://docs.google.com/document/d/1cr3qAXbVi1-88xS3KPatr8-63rS5abyUHdSNP-aR-Ao/edit" target="_blank" rel="noopener">
+      <span class="pill made">Made by Infinite AI</span>
       <span class="k">Proposal</span>
       <b>The proposal</b>
       <p>The offer, the 45-day build, and what ALIVE would own at the end.</p>
       <span class="go">Open the Doc →</span>
     </a>
     <a class="lcard" href="https://docs.google.com/spreadsheets/d/1RQMe0lyv1u40mtlNULU8b60UyXZi1bkJPB673PJVHl0/edit" target="_blank" rel="noopener">
+      <span class="pill made">Made by Infinite AI</span>
       <span class="k">Las Colinas</span>
       <b>Nearby businesses</b>
       <p>The real list of businesses around the Las Colinas studio.</p>
@@ -145,170 +298,77 @@ footer{margin-top:8px;color:var(--mut);font-size:11px;line-height:1.6}
   </div>
 </section>
 
-<section class="section" id="videos">
-  <h2>Videos</h2>
-  <p class="lede">The newest final cut of each piece. Ads are shown in the 9:16 format they’d run on Instagram, TikTok and Meta. A few also have a 16:9 cut for the website or a meeting screen.</p>
 
-  <div class="group" id="agent">
-    <h3>The agent in action</h3>
-    <p class="hint">A walkthrough of the ALIVE Growth Agent — the core of the offer.</p>
-    <div class="vcard full" id="demo">
-      <div class="frame">
-        <video controls preload="metadata" poster="posters/agent-demo.jpg" src="videos/agent-demo.mp4" playsinline></video>
-      </div>
-      <div class="meta"><h4>Agent demo</h4><span class="len">2:05 · 16:9</span></div>
-      <p class="desc">The ALIVE Growth Agent at work around Las Colinas: it finds the businesses, asks the studio to approve each batch, then works them with mail, email, texts, calls and ads. Play this in the meeting.</p>
-    </div>
-  </div>
-
-  <div class="group" id="films">
-    <h3>Brand films</h3>
-    <p class="hint">Short films about the studio itself — why ALIVE exists, and what it feels like to walk in.</p>
-    <div class="wide-grid">
-      <article class="vcard" id="why-alive">
-        <div class="frame">
-          <video controls preload="metadata" poster="posters/why-alive.jpg" src="videos/why-alive.mp4" playsinline></video>
-        </div>
-        <div class="meta"><h4>Why ALIVE</h4><span class="len">1:07 · 16:9</span></div>
-        <p class="desc">A short film about why ALIVE was created and who it’s for. It opens on “The room is part of the class.” For the website, a studio screen, or the start of a visit.</p>
-      </article>
-      <article class="vcard" id="presenter">
-        <div class="frame">
-          <video controls preload="metadata" poster="posters/ai-presenter.jpg" src="videos/ai-presenter.mp4" playsinline></video>
-        </div>
-        <div class="meta"><h4>Honest AI presenter</h4><span class="len">1:06 · 16:9</span></div>
-        <p class="desc">An AI presenter who admits it feels strange at first, then shares what members actually say — real reviews and studio ratings. Labeled AI-generated the whole way through. For paid social or a landing page.</p>
-      </article>
-    </div>
-  </div>
-
-  <div class="group" id="ads">
-    <h3>Ads</h3>
-    <p class="hint">Short social ads. A, B and C open on the same hook, then offer a free class to a different neighbor. D and E are brand and first-timer ads.</p>
-    <div class="ads">
-      <article class="ad-card" id="ad-a" data-src9="videos/ad-a-9x16.mp4" data-poster9="posters/ad-a-9x16.jpg" data-src16="videos/ad-a-16x9.mp4" data-poster16="posters/ad-a-16x9.jpg">
-        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-a-9x16.jpg" src="videos/ad-a-9x16.mp4" playsinline></video></div></div>
-        <div class="meta"><h4>Ad A · 3PM offices</h4><span class="len">0:25</span></div>
-        <p class="desc">Opens “This isn’t a yoga class,” then offers nearby offices a free class for their team, timed for the afternoon slump. For Instagram, TikTok and Meta around each studio.</p>
-        <div class="seg"><button type="button" class="on" data-a="9x16">9:16</button><button type="button" data-a="16x9">16:9</button></div>
-      </article>
-      <article class="ad-card" id="ad-b">
-        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-b-9x16.jpg" src="videos/ad-b-9x16.mp4" playsinline></video></div></div>
-        <div class="meta"><h4>Ad B · Resident perk</h4><span class="len">0:25 · 9:16</span></div>
-        <p class="desc">The same hook, then a free class for residents — made for property managers and apartment communities. For those inboxes and local social.</p>
-      </article>
-      <article class="ad-card" id="ad-c" data-src9="videos/ad-c-9x16.mp4" data-poster9="posters/ad-c-9x16.jpg" data-src16="videos/ad-c-16x9.mp4" data-poster16="posters/ad-c-16x9.jpg">
-        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-c-9x16.jpg" src="videos/ad-c-9x16.mp4" playsinline></video></div></div>
-        <div class="meta"><h4>Ad C · Neighbor perk</h4><span class="len">0:24</span></div>
-        <p class="desc">The same hook, then a free class for people who work or live nearby. For local Meta and Instagram around each studio.</p>
-        <div class="seg"><button type="button" class="on" data-a="9x16">9:16</button><button type="button" data-a="16x9">16:9</button></div>
-      </article>
-      <article class="ad-card" id="ad-d">
-        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-d-9x16.jpg" src="videos/ad-d-9x16.mp4" playsinline></video></div></div>
-        <div class="meta"><h4>Ad D · The room does the work</h4><span class="len">0:27 · 9:16</span></div>
-        <p class="desc">“Yoga, but the room does the work.” A brand ad about the heat, the video wall, and sound and light in sync. For paid social.</p>
-      </article>
-      <article class="ad-card" id="ad-e">
-        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-e-9x16.jpg" src="videos/ad-e-9x16.mp4" playsinline></video></div></div>
-        <div class="meta"><h4>Ad E · First-timer</h4><span class="len">0:28 · 9:16</span></div>
-        <p class="desc">For people new to hot yoga: “Never done hot yoga? Perfect. Start here.” Mentions the first 31 days at $24.99. For prospecting and retargeting.</p>
-      </article>
-    </div>
-    <p class="note">End cards still say “[booking link]” — a placeholder until ALIVE provides the real URL.</p>
-  </div>
-
-  <div class="group concept" id="concept">
-    <h3>Concept <span class="tag concept">AI recreation · concept only</span></h3>
-    <p class="hint">Not their real studio, and no real faces. A taste of how campaign creative could look, kept on the side.</p>
-    <article class="vcard" id="recreation">
-      <div class="frame">
-        <video controls preload="metadata" poster="posters/ai-recreation.jpg" src="videos/ai-recreation.mp4" playsinline></video>
-      </div>
-      <div class="meta"><h4>AI studio recreation</h4><span class="len">0:19 · 16:9</span></div>
-      <p class="desc">An AI-made walk through a studio in ALIVE’s colors, with the line “Yoga, but the room does the work.” This is a concept, not a picture of an ALIVE room.</p>
-    </article>
-  </div>
 </section>
 
+<section class="section" id="theirs">
+  <div class="shh part"><h2>ALIVE today (their photos and channels)</h2><span class="pill theirs">ALIVE's own</span></div>
+  <p class="lede">ALIVE’s own photography, logo, and a fuller gallery of their stills.</p>
+  <div class="links" style="grid-template-columns:repeat(3,1fr);margin-bottom:22px">
+    <a class="lcard" href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/dfcf7914-a65b-4c85-85f7-4e0e5bb7ea3e" target="_blank" rel="noopener">
+      <span class="pill theirs">ALIVE's own</span>
+      <span class="k">Gallery</span>
+      <b>Full photo gallery</b>
+      <p>A wider set of ALIVE’s real photos and stills, organized for review.</p>
+      <span class="go">Open the Page →</span>
+    </a>
+  </div>
+
 <section class="section" id="photos">
-  <h2>ALIVE’s photos</h2>
+  <div class="shh"><h2>Their photos</h2><span class="pill theirs">ALIVE's own</span></div>
   <p class="lede">Eighteen of ALIVE’s own photos, grouped the way we reviewed them. Click any picture to enlarge it.</p>
 
   <div class="group">
-    <h3>Founders</h3>
+    <div class="shh"><h3>Founders</h3><span class="pill theirs">ALIVE's own</span></div>
     <p class="hint">Brandon and the team, as ALIVE shows them.</p>
     <div class="photos cols3">
-      <a href="photos/01-founders.jpg" data-lb="Founders"><img src="thumbs/01-founders.jpg" alt="Founders"><span class="cap">Founders</span></a>
+      <a href="photos/01-founders.jpg" data-lb="Founders"><img src="thumbs/01-founders.jpg" alt="Founders"><span class="cap"><span class="pill theirs">ALIVE's own</span> Founders</span></a>
     </div>
   </div>
   <div class="group">
-    <h3>The studios</h3>
+    <div class="shh"><h3>The studios</h3><span class="pill theirs">ALIVE's own</span></div>
     <p class="hint">Las Colinas, Plano and Southlake from the outside.</p>
     <div class="photos cols3">
-      <a href="photos/02-ext-lascolinas.jpg" data-lb="Las Colinas"><img src="thumbs/02-ext-lascolinas.jpg" alt="Las Colinas exterior"><span class="cap">Las Colinas</span></a>
-      <a href="photos/03-ext-plano.jpg" data-lb="Plano"><img src="thumbs/03-ext-plano.jpg" alt="Plano exterior"><span class="cap">Plano</span></a>
-      <a href="photos/04-ext-southlake.jpg" data-lb="Southlake"><img src="thumbs/04-ext-southlake.jpg" alt="Southlake exterior"><span class="cap">Southlake</span></a>
+      <a href="photos/02-ext-lascolinas.jpg" data-lb="Las Colinas"><img src="thumbs/02-ext-lascolinas.jpg" alt="Las Colinas exterior"><span class="cap"><span class="pill theirs">ALIVE's own</span> Las Colinas</span></a>
+      <a href="photos/03-ext-plano.jpg" data-lb="Plano"><img src="thumbs/03-ext-plano.jpg" alt="Plano exterior"><span class="cap"><span class="pill theirs">ALIVE's own</span> Plano</span></a>
+      <a href="photos/04-ext-southlake.jpg" data-lb="Southlake"><img src="thumbs/04-ext-southlake.jpg" alt="Southlake exterior"><span class="cap"><span class="pill theirs">ALIVE's own</span> Southlake</span></a>
     </div>
   </div>
   <div class="group">
-    <h3>Inside the room</h3>
+    <div class="shh"><h3>Inside the room</h3><span class="pill theirs">ALIVE's own</span></div>
     <p class="hint">The lobby moss wall, the practice room, and the ceiling and sky screens.</p>
     <div class="photos cols4">
-      <a href="photos/05-lobby-mosswall.jpg" data-lb="Lobby moss wall"><img src="thumbs/05-lobby-mosswall.jpg" alt="Lobby moss wall"><span class="cap">Lobby moss wall</span></a>
-      <a href="photos/06-room-empty.jpg" data-lb="The practice room"><img src="thumbs/06-room-empty.jpg" alt="The practice room"><span class="cap">The practice room</span></a>
-      <a href="photos/07-room-ceiling.jpg" data-lb="Ceiling screens"><img src="thumbs/07-room-ceiling.jpg" alt="Ceiling screens"><span class="cap">Ceiling screens</span></a>
-      <a href="photos/08-room-skyscreens.jpg" data-lb="Sky screens"><img src="thumbs/08-room-skyscreens.jpg" alt="Sky screens"><span class="cap">Sky screens</span></a>
+      <a href="photos/05-lobby-mosswall.jpg" data-lb="Lobby moss wall"><img src="thumbs/05-lobby-mosswall.jpg" alt="Lobby moss wall"><span class="cap"><span class="pill theirs">ALIVE's own</span> Lobby moss wall</span></a>
+      <a href="photos/06-room-empty.jpg" data-lb="The practice room"><img src="thumbs/06-room-empty.jpg" alt="The practice room"><span class="cap"><span class="pill theirs">ALIVE's own</span> The practice room</span></a>
+      <a href="photos/07-room-ceiling.jpg" data-lb="Ceiling screens"><img src="thumbs/07-room-ceiling.jpg" alt="Ceiling screens"><span class="cap"><span class="pill theirs">ALIVE's own</span> Ceiling screens</span></a>
+      <a href="photos/08-room-skyscreens.jpg" data-lb="Sky screens"><img src="thumbs/08-room-skyscreens.jpg" alt="Sky screens"><span class="cap"><span class="pill theirs">ALIVE's own</span> Sky screens</span></a>
     </div>
   </div>
   <div class="group">
-    <h3>Classes &amp; the video wall</h3>
+    <div class="shh"><h3>Classes &amp; the video wall</h3><span class="pill theirs">ALIVE's own</span></div>
     <p class="hint">What it looks like when the room is in session.</p>
     <div class="photos">
-      <a href="photos/09-wall-class.jpg" data-lb="Class at the video wall"><img src="thumbs/09-wall-class.jpg" alt="Class at the video wall"><span class="cap">Class at the wall</span></a>
-      <a href="photos/10-wall-group.jpg" data-lb="Group at the wall"><img src="thumbs/10-wall-group.jpg" alt="Group at the wall"><span class="cap">Group at the wall</span></a>
-      <a href="photos/11-wall-wide-cw33.jpg" data-lb="The room, wide"><img src="thumbs/11-wall-wide-cw33.jpg" alt="The room, wide"><span class="cap">The room, wide</span></a>
-      <a href="photos/12-class-group.jpg" data-lb="Group class"><img src="thumbs/12-class-group.jpg" alt="Group class"><span class="cap">Group class</span></a>
-      <a href="photos/13-class-coach.jpg" data-lb="A coached class"><img src="thumbs/13-class-coach.jpg" alt="A coached class"><span class="cap">A coached class</span></a>
-      <a href="photos/14-class-wide.jpg" data-lb="Class, wide"><img src="thumbs/14-class-wide.jpg" alt="Class, wide"><span class="cap">Class, wide</span></a>
+      <a href="photos/09-wall-class.jpg" data-lb="Class at the video wall"><img src="thumbs/09-wall-class.jpg" alt="Class at the video wall"><span class="cap"><span class="pill theirs">ALIVE's own</span> Class at the wall</span></a>
+      <a href="photos/10-wall-group.jpg" data-lb="Group at the wall"><img src="thumbs/10-wall-group.jpg" alt="Group at the wall"><span class="cap"><span class="pill theirs">ALIVE's own</span> Group at the wall</span></a>
+      <a href="photos/11-wall-wide-cw33.jpg" data-lb="The room, wide"><img src="thumbs/11-wall-wide-cw33.jpg" alt="The room, wide"><span class="cap"><span class="pill theirs">ALIVE's own</span> The room, wide</span></a>
+      <a href="photos/12-class-group.jpg" data-lb="Group class"><img src="thumbs/12-class-group.jpg" alt="Group class"><span class="cap"><span class="pill theirs">ALIVE's own</span> Group class</span></a>
+      <a href="photos/13-class-coach.jpg" data-lb="A coached class"><img src="thumbs/13-class-coach.jpg" alt="A coached class"><span class="cap"><span class="pill theirs">ALIVE's own</span> A coached class</span></a>
+      <a href="photos/14-class-wide.jpg" data-lb="Class, wide"><img src="thumbs/14-class-wide.jpg" alt="Class, wide"><span class="cap"><span class="pill theirs">ALIVE's own</span> Class, wide</span></a>
     </div>
   </div>
   <div class="group">
-    <h3>Brand &amp; class art</h3>
+    <div class="shh"><h3>Brand &amp; class art</h3><span class="pill theirs">ALIVE's own</span></div>
     <p class="hint">Class art, the coached-vs-immersive explainer, and the logo.</p>
     <div class="photos cols4">
-      <a href="photos/15-art-atom.jpg" data-lb="Atom"><img src="thumbs/15-art-atom.jpg" alt="Atom class art"><span class="cap">Atom</span></a>
-      <a href="photos/16-art-particle.jpg" data-lb="Particle"><img src="thumbs/16-art-particle.jpg" alt="Particle class art"><span class="cap">Particle</span></a>
-      <a href="photos/17-coached-vs-immersive.jpg" data-lb="Coached vs immersive"><img src="thumbs/17-coached-vs-immersive.jpg" alt="Coached vs immersive"><span class="cap">Coached vs immersive</span></a>
-      <a href="photos/18-logo.jpg" data-lb="ALIVE logo"><img src="thumbs/18-logo.jpg" alt="ALIVE logo"><span class="cap">Logo</span></a>
+      <a href="photos/15-art-atom.jpg" data-lb="Atom"><img src="thumbs/15-art-atom.jpg" alt="Atom class art"><span class="cap"><span class="pill theirs">ALIVE's own</span> Atom</span></a>
+      <a href="photos/16-art-particle.jpg" data-lb="Particle"><img src="thumbs/16-art-particle.jpg" alt="Particle class art"><span class="cap"><span class="pill theirs">ALIVE's own</span> Particle</span></a>
+      <a href="photos/17-coached-vs-immersive.jpg" data-lb="Coached vs immersive"><img src="thumbs/17-coached-vs-immersive.jpg" alt="Coached vs immersive"><span class="cap"><span class="pill theirs">ALIVE's own</span> Coached vs immersive</span></a>
+      <a href="photos/18-logo.jpg" data-lb="ALIVE logo"><img src="thumbs/18-logo.jpg" alt="ALIVE logo"><span class="cap"><span class="pill theirs">ALIVE's own</span> Logo</span></a>
     </div>
   </div>
 </section>
 
-<section class="section" id="postcard">
-  <h2>Postcard</h2>
-  <p class="lede">The neighbor-perk mailer, front and back. This is a draft.</p>
-  <div class="warn-banner">Draft: the front photo includes a child and will be swapped for a real ALIVE photo before any printing.</div>
-  <div class="pcs">
-    <a href="photos/postcard-front.jpg" data-lb="Postcard front — draft, photo will be swapped">
-      <img src="photos/postcard-front.jpg" alt="Postcard front">
-      <div class="cap">Front</div>
-      <div class="warn">Draft: front photo will be swapped for a real ALIVE photo.</div>
-    </a>
-    <a href="photos/postcard-back.jpg" data-lb="Postcard back">
-      <img src="photos/postcard-back.jpg" alt="Postcard back">
-      <div class="cap">Back</div>
-    </a>
-  </div>
-</section>
 
-<section class="section" id="muse">
-  <h2>Concept ad images</h2>
-  <p class="lede">Three stills from Chase’s Muse agent. Concept only — not official ALIVE photography.</p>
-  <div class="photos cols3">
-    <a href="muse/muse-1.jpg" data-lb="Concept ad image 1"><img src="thumbs/muse-1.jpg" alt="Concept ad image 1"><span class="cap">Concept 1</span></a>
-    <a href="muse/muse-2.jpg" data-lb="Concept ad image 2"><img src="thumbs/muse-2.jpg" alt="Concept ad image 2"><span class="cap">Concept 2</span></a>
-    <a href="muse/muse-3.jpg" data-lb="Concept ad image 3"><img src="thumbs/muse-3.jpg" alt="Concept ad image 3"><span class="cap">Concept 3</span></a>
-  </div>
 </section>
 
 <footer>Nothing here has been posted or sent. Built by Infinite AI · myinfinite.ai · <a href="index.html" style="color:var(--live)">Back to the dashboard</a></footer>

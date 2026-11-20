@@ -115,17 +115,41 @@ footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
 .pack-vids small{color:var(--mut);font-size:11px}
 @media(max-width:1100px){.pack-links{grid-template-columns:repeat(2,1fr)}.pack-vids{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){header{flex-wrap:wrap}.topnav{order:3;width:100%}.pack-vids{grid-template-columns:repeat(2,1fr)}}
+
+.pill{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:3px 9px;border-radius:999px;white-space:nowrap;line-height:1.25;vertical-align:middle}
+.pill.made{background:var(--green);color:#fff;border:1px solid rgba(61,220,132,.5)}
+.pill.theirs{background:transparent;color:#c5c9ce;border:1px solid #7a818a}
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 20px;padding:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.legend .how{color:var(--mut);font-size:13px}
+.from{font-size:11px;color:#b4bac2;font-weight:500}
+.pill-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 2px 6px}
+.shh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 6px}
+.shh h2,.shh h3{margin:0}
+.shh.part h2{font-size:22px;letter-spacing:-.3px;text-transform:none;color:var(--txt);font-weight:700}
+.lcard .pill{align-self:flex-start}
+.card h3{gap:8px;flex-wrap:wrap}
+.card h3 .pill{letter-spacing:.6px;font-weight:700}
+.pack-vids .pc .pill,.pack-links .pill{margin-top:6px;align-self:flex-start}
+.pack-links a{position:relative}
+.agent .pill{margin-left:4px}
+.brand .pill{margin-left:2px}
 </style></head><body><div class="wrap">
 <header>
-  <div class="brand"><span class="inf">INFINITE AI</span><span class="x">×</span><img src="alive-white.png" alt="ALIVE"><span class="fm">Force Multiplier</span></div>
+  <div class="brand"><span class="inf">INFINITE AI</span><span class="x">×</span><img src="alive-white.png" alt="ALIVE"><span class="pill theirs">ALIVE's own</span><span class="fm">Force Multiplier</span></div>
   <nav class="topnav">
     <a href="index.html" class="on">Dashboard</a>
     <a href="package.html">The Package</a>
   </nav>
-  <div class="agent"><span class="live"></span><div><b>ALIVE Growth Agent</b><small>Own computer · Las Colinas · Day <span id="dayn">1</span></small></div><span class="mono" id="clock" style="color:var(--mut);font-size:12px"></span><span class="demo">DEMO</span></div>
+  <div class="agent"><span class="live"></span><div><b>ALIVE Growth Agent</b><small>Own computer · Las Colinas · Day <span id="dayn">1</span></small></div><span class="mono" id="clock" style="color:var(--mut);font-size:12px"></span><span class="pill made">Made by Infinite AI</span><span class="demo">DEMO</span></div>
 </header>
 <h1>One agent. Working Las Colinas <span>every day</span>, steady, not overbearing.</h1>
-<p class="sub">It finds every business around the studio, checks the data, asks the studio manager to approve each batch, then works them at a steady daily pace with mail, email, texts, calls and retargeting. When the radius runs out, we clone it.</p>
+<p class="sub">This dashboard is a live demo of the ALIVE Growth Agent — built by Infinite AI. Green labels are what we made. Outlined labels are ALIVE’s own.</p>
+<div class="legend">
+  <span class="how">How to read this page:</span>
+  <span class="pill made">Made by Infinite AI</span>
+  <span class="pill theirs">ALIVE's own</span>
+</div>
+
 <div class="hero-actions"><a class="btn-pack" href="package.html">See the full package — videos, photos, and links →</a></div>
 
 <div class="kpis">
@@ -140,14 +164,14 @@ footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
 </div>
 
 <div class="grid3">
-  <div class="card"><h3>Radius map <span class="tag real">REAL SCRAPE · 217 PLACES</span></h3>
+  <div class="card"><h3>Radius map <span class="tag real">REAL SCRAPE · 217 PLACES</span> <span class="pill made">Made by Infinite AI</span></h3>
     <svg id="map" viewBox="0 0 520 520"></svg>
     <div class="addr">📍 ALIVE Las Colinas · 975 W John Carpenter Fwy #109A, Irving, TX 75039 · next ring: 1 mi → 2 mi → 4 mi</div>
     <div class="segs" id="segs"></div>
   </div>
-  <div class="card"><h3>The pipeline <span class="muted" style="letter-spacing:0;text-transform:none;font-size:11px">One business at a time, on a daily pace</span></h3><div class="pipe" id="pipe"></div></div>
+  <div class="card"><h3>The pipeline <span class="muted" style="letter-spacing:0;text-transform:none;font-size:11px">One business at a time, on a daily pace</span> <span class="pill made">Made by Infinite AI</span></h3><div class="pipe" id="pipe"></div></div>
   <div class="side">
-    <div class="card"><h3>Approval request <span class="tag dm">MOCK</span></h3>
+    <div class="card"><h3>Approval request <span class="tag dm">MOCK</span> <span class="pill made">Made by Infinite AI</span></h3>
       <div class="slack" id="approval">
         <div class="sh"><div class="av">A</div><div><b>ALIVE Growth Agent <span class="app">APP</span></b><small>to Studio Manager · #las-colinas-growth</small></div></div>
         <div id="apbody">Preparing the first batch…</div>
@@ -157,7 +181,7 @@ footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
         <div class="via">Also via WhatsApp: reply <b>YES</b> or <b>NO</b></div>
       </div>
     </div>
-<div class="card"><h3>Coverage rings <span class="tag real">REAL</span></h3>
+<div class="card"><h3>Coverage rings <span class="tag real">REAL</span> <span class="pill made">Made by Infinite AI</span></h3>
       <div class="rings">
         <div class="rg done"><span>0.25 mi</span><b>57</b><small>validated</small></div>
         <div class="rg done"><span>0.5 mi</span><b>217</b><small>validated · in pipeline</small></div>
@@ -165,7 +189,7 @@ footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
         <div class="rg q"><span>2 mi</span><b>1,046</b><small>found, queued</small></div>
         <div class="rg est"><span>4 mi</span><b>~5,600</b><small>employer businesses (Census est.)</small></div>
       </div></div>
-    <div class="card"><h3>Pacing · today's caps</h3>
+    <div class="card"><h3>Pacing · today's caps <span class="pill made">Made by Infinite AI</span></h3>
       <div class="caps">
         <div class="cap"><span>📬 Mailers</span><span class="bar"><i id="cb_mail"></i></span><span id="c_mail"></span></div>
         <div class="cap"><span>✉️ Emails</span><span class="bar"><i id="cb_email"></i></span><span id="c_email"></span></div>
@@ -178,41 +202,41 @@ footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
   </div>
 </div>
 
-<div class="card feedcard"><h3>Live activity <span class="tag dm">SIMULATED · REAL BUSINESS NAMES FROM SCRAPE</span></h3><div id="feed"></div></div>
+<div class="card feedcard"><h3>Live activity <span class="tag dm">SIMULATED · REAL BUSINESS NAMES FROM SCRAPE</span> <span class="pill made">Made by Infinite AI</span></h3><div id="feed"></div></div>
 
 <div class="bottom">
-  <div class="card"><h3>Clone to the next studio</h3>
+  <div class="card"><h3>Clone to the next studio <span class="pill made">Made by Infinite AI</span></h3>
     <div class="clones"><button class="clone" data-city="Plano">＋ Clone to Plano · 4909 W Park Blvd</button><button class="clone" data-city="Southlake">＋ Clone to Southlake · 2140 E Southlake Blvd</button></div>
     <div class="steady">Estimated businesses with employees within 4 miles: Las Colinas ~5,600 · Plano ~7,800 · Southlake ~4,600 (Census ZIP data, area-weighted estimate).</div>
   </div>
-<div class="card"><h3>Inbound call · handled by AI <span class="tag dm">DEMO</span></h3><div id="call" class="call"></div></div>
-  <div class="card"><h3>Mailer proof · Neighbor perk</h3><div class="pc"><img src="postcard-front.jpg" alt="Postcard front"><img src="postcard-back.jpg" alt="Postcard back"></div></div>
+<div class="card"><h3>Inbound call · handled by AI <span class="tag dm">DEMO</span> <span class="pill made">Made by Infinite AI</span></h3><div id="call" class="call"></div></div>
+  <div class="card"><h3>Mailer proof · Neighbor perk <span class="pill made">Made by Infinite AI</span></h3><div class="pc"><img src="postcard-front.jpg" alt="Postcard front"><img src="postcard-back.jpg" alt="Postcard back"></div></div>
 </div>
 
 <div class="pack-band" id="package">
   <div class="band-h">
     <div>
-      <h2>The Package</h2>
-      <p class="lede">Every final-cut video, ALIVE’s photos, the draft postcard, concept images, and the working docs — organized in one place.</p>
+      <div class="shh part"><h2>The Package</h2><span class="pill made">Made by Infinite AI</span></div>
+      <p class="lede">What we made is labeled in green. ALIVE’s own photos are outlined in grey. Open the full package to see both, clearly marked.</p>
     </div>
     <a class="btn-pack" href="package.html">Open the full package →</a>
   </div>
   <div class="pack-links">
-    <a href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/56a08167-d32c-416b-99a4-da3c88d7b42d" target="_blank" rel="noopener"><span class="k">Playbook</span><b>The ALIVE playbook</b><span>How the outbound engine would work.</span></a>
-    <a href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/dfcf7914-a65b-4c85-85f7-4e0e5bb7ea3e" target="_blank" rel="noopener"><span class="k">Gallery</span><b>Full photo gallery</b><span>ALIVE’s real photos, organized.</span></a>
-    <a href="https://docs.google.com/document/d/1cr3qAXbVi1-88xS3KPatr8-63rS5abyUHdSNP-aR-Ao/edit" target="_blank" rel="noopener"><span class="k">Proposal</span><b>The proposal</b><span>The offer and the 45-day build.</span></a>
-    <a href="https://docs.google.com/spreadsheets/d/1RQMe0lyv1u40mtlNULU8b60UyXZi1bkJPB673PJVHl0/edit" target="_blank" rel="noopener"><span class="k">Las Colinas</span><b>Nearby businesses</b><span>The real list around the studio.</span></a>
+    <a href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/56a08167-d32c-416b-99a4-da3c88d7b42d" target="_blank" rel="noopener"><span class="pill made">Made by Infinite AI</span><span class="k">Playbook</span><b>The ALIVE playbook</b><span>How the outbound engine would work.</span></a>
+    <a href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/dfcf7914-a65b-4c85-85f7-4e0e5bb7ea3e" target="_blank" rel="noopener"><span class="pill theirs">ALIVE's own</span><span class="k">Gallery</span><b>Full photo gallery</b><span>ALIVE’s real photos, organized.</span></a>
+    <a href="https://docs.google.com/document/d/1cr3qAXbVi1-88xS3KPatr8-63rS5abyUHdSNP-aR-Ao/edit" target="_blank" rel="noopener"><span class="pill made">Made by Infinite AI</span><span class="k">Proposal</span><b>The proposal</b><span>The offer and the 45-day build.</span></a>
+    <a href="https://docs.google.com/spreadsheets/d/1RQMe0lyv1u40mtlNULU8b60UyXZi1bkJPB673PJVHl0/edit" target="_blank" rel="noopener"><span class="pill made">Made by Infinite AI</span><span class="k">Las Colinas</span><b>Nearby businesses</b><span>The real list around the studio.</span></a>
   </div>
   <div class="pack-vids">
-    <a href="package.html#demo"><img src="posters/agent-demo.jpg" alt="Agent demo"><div class="pc"><b>Agent demo</b><small>2:05 · The agent in action</small></div></a>
-    <a href="package.html#why-alive"><img src="posters/why-alive.jpg" alt="Why ALIVE"><div class="pc"><b>Why ALIVE</b><small>1:07 · Brand film</small></div></a>
-    <a href="package.html#presenter"><img src="posters/ai-presenter.jpg" alt="Honest AI presenter"><div class="pc"><b>AI presenter</b><small>1:06 · Brand film</small></div></a>
-    <a class="vert" href="package.html#ad-a"><img src="posters/ad-a-9x16.jpg" alt="Ad A"><div class="pc"><b>Ad A · 3PM offices</b><small>0:25 · 9:16</small></div></a>
-    <a class="vert" href="package.html#ad-b"><img src="posters/ad-b-9x16.jpg" alt="Ad B"><div class="pc"><b>Ad B · Resident perk</b><small>0:25 · 9:16</small></div></a>
-    <a class="vert" href="package.html#ad-c"><img src="posters/ad-c-9x16.jpg" alt="Ad C"><div class="pc"><b>Ad C · Neighbor perk</b><small>0:24 · 9:16</small></div></a>
-    <a class="vert" href="package.html#ad-d"><img src="posters/ad-d-9x16.jpg" alt="Ad D"><div class="pc"><b>Ad D · The room</b><small>0:27 · 9:16</small></div></a>
-    <a class="vert" href="package.html#ad-e"><img src="posters/ad-e-9x16.jpg" alt="Ad E"><div class="pc"><b>Ad E · First-timer</b><small>0:28 · 9:16</small></div></a>
-    <a href="package.html#recreation"><img src="posters/ai-recreation.jpg" alt="AI recreation"><div class="pc"><b>AI recreation</b><small>0:19 · Concept only</small></div></a>
+    <a href="package.html#demo"><img src="posters/agent-demo.jpg" alt="Agent demo"><div class="pc"><b>Agent demo</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>2:05 · The agent in action</small></div></a>
+    <a href="package.html#why-alive"><img src="posters/why-alive.jpg" alt="Why ALIVE"><div class="pc"><b>Why ALIVE</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>1:07 · Brand film</small></div></a>
+    <a href="package.html#presenter"><img src="posters/ai-presenter.jpg" alt="Honest AI presenter"><div class="pc"><b>AI presenter</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>1:06 · Brand film</small></div></a>
+    <a class="vert" href="package.html#ad-a"><img src="posters/ad-a-9x16.jpg" alt="Ad A"><div class="pc"><b>Ad A · 3PM offices</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>0:25 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-b"><img src="posters/ad-b-9x16.jpg" alt="Ad B"><div class="pc"><b>Ad B · Resident perk</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>0:25 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-c"><img src="posters/ad-c-9x16.jpg" alt="Ad C"><div class="pc"><b>Ad C · Neighbor perk</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>0:24 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-d"><img src="posters/ad-d-9x16.jpg" alt="Ad D"><div class="pc"><b>Ad D · The room</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>0:27 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-e"><img src="posters/ad-e-9x16.jpg" alt="Ad E"><div class="pc"><b>Ad E · First-timer</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">Built from ALIVE's own footage</span></div><small>0:28 · 9:16</small></div></a>
+    <a href="package.html#recreation"><img src="posters/ai-recreation.jpg" alt="AI recreation"><div class="pc"><b>AI recreation</b><div class="pill-row"><span class="pill made">Made by Infinite AI</span><span class="from">AI-generated concept from ALIVE's photos</span></div><small>0:19 · Concept only</small></div></a>
   </div>
 </div>
 <footer>REAL: 217 businesses within 0.5 mi of ALIVE Las Colinas, 216 validated mailing addresses, 55 emails, and the segment counts, all from a Nov 19, 2026 trial scrape. DEMO: approvals, mailers, replies, meetings, members and the activity feed are simulated for illustration. Nothing has been sent. Built by Infinite AI · myinfinite.ai</footer>

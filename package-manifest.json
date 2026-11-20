@@ -1,0 +1,103 @@
+{
+  "videos": [
+    {
+      "slot": "agent-demo",
+      "source": "/workspace/infinite-ai/alive-demo/alive-demo-16x9-VOICED.mp4",
+      "source_name": "alive-demo-16x9-VOICED.mp4",
+      "duration_s": 125.418,
+      "published": "videos/agent-demo.mp4",
+      "published_bytes": 9748967,
+      "poster": "posters/agent-demo.jpg"
+    },
+    {
+      "slot": "why-alive",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_Why-ALIVE_60s_16x9_VOICED_v3brand.mp4",
+      "source_name": "ALIVE_Why-ALIVE_60s_16x9_VOICED_v3brand.mp4",
+      "duration_s": 66.967,
+      "published": "videos/why-alive.mp4",
+      "published_bytes": 23173632,
+      "poster": "posters/why-alive.jpg"
+    },
+    {
+      "slot": "ai-presenter",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_AI-presenter_60s_16x9_VOICED_v3brand.mp4",
+      "source_name": "ALIVE_AI-presenter_60s_16x9_VOICED_v3brand.mp4",
+      "duration_s": 65.749,
+      "published": "videos/ai-presenter.mp4",
+      "published_bytes": 17268773,
+      "poster": "posters/ai-presenter.jpg"
+    },
+    {
+      "slot": "ad-a-9x16",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_A_why-ALIVE_3PM-offices_9x16_VOICED_v4brand.mp4",
+      "source_name": "ALIVE_A_why-ALIVE_3PM-offices_9x16_VOICED_v4brand.mp4",
+      "duration_s": 24.967,
+      "published": "videos/ad-a-9x16.mp4",
+      "published_bytes": 6772508,
+      "poster": "posters/ad-a-9x16.jpg"
+    },
+    {
+      "slot": "ad-a-16x9",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_A_why-ALIVE_3PM-offices_16x9_VOICED_v4brand.mp4",
+      "source_name": "ALIVE_A_why-ALIVE_3PM-offices_16x9_VOICED_v4brand.mp4",
+      "duration_s": 24.967,
+      "published": "videos/ad-a-16x9.mp4",
+      "published_bytes": 6403568,
+      "poster": "posters/ad-a-16x9.jpg"
+    },
+    {
+      "slot": "ad-b-9x16",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_B_why-ALIVE_resident-perk_9x16_VOICED_v4brand.mp4",
+      "source_name": "ALIVE_B_why-ALIVE_resident-perk_9x16_VOICED_v4brand.mp4",
+      "duration_s": 24.81,
+      "published": "videos/ad-b-9x16.mp4",
+      "published_bytes": 7486526,
+      "poster": "posters/ad-b-9x16.jpg"
+    },
+    {
+      "slot": "ad-c-9x16",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_C_why-ALIVE_neighbor-perk_9x16_VOICED_v4brand.mp4",
+      "source_name": "ALIVE_C_why-ALIVE_neighbor-perk_9x16_VOICED_v4brand.mp4",
+      "duration_s": 24.367,
+      "published": "videos/ad-c-9x16.mp4",
+      "published_bytes": 6188676,
+      "poster": "posters/ad-c-9x16.jpg"
+    },
+    {
+      "slot": "ad-c-16x9",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_C_why-ALIVE_neighbor-perk_16x9_VOICED_v4brand.mp4",
+      "source_name": "ALIVE_C_why-ALIVE_neighbor-perk_16x9_VOICED_v4brand.mp4",
+      "duration_s": 24.367,
+      "published": "videos/ad-c-16x9.mp4",
+      "published_bytes": 6129432,
+      "poster": "posters/ad-c-16x9.jpg"
+    },
+    {
+      "slot": "ad-d-9x16",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_D_room-does-the-work_9x16_VOICED.mp4",
+      "source_name": "ALIVE_D_room-does-the-work_9x16_VOICED.mp4",
+      "duration_s": 26.837,
+      "published": "videos/ad-d-9x16.mp4",
+      "published_bytes": 8649492,
+      "poster": "posters/ad-d-9x16.jpg"
+    },
+    {
+      "slot": "ad-e-9x16",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_E_first-timer_9x16_VOICED.mp4",
+      "source_name": "ALIVE_E_first-timer_9x16_VOICED.mp4",
+      "duration_s": 28.138,
+      "published": "videos/ad-e-9x16.mp4",
+      "published_bytes": 9779470,
+      "poster": "posters/ad-e-9x16.jpg"
+    },
+    {
+      "slot": "ai-recreation",
+      "source": "/workspace/infinite-ai/alive-ads/finals/ALIVE_AI-recreation_concept-only_16x9_v3.mp4",
+      "source_name": "ALIVE_AI-recreation_concept-only_16x9_v3.mp4",
+      "duration_s": 19.434,
+      "published": "videos/ai-recreation.mp4",
+      "published_bytes": 11239214,
+      "poster": "posters/ai-recreation.jpg"
+    }
+  ]
+}

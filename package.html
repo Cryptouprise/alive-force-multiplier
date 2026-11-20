@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Package · Infinite AI × ALIVE</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="The Package · Infinite AI × ALIVE">
+<meta property="og:description" content="Everything we made for ALIVE — final-cut videos, photos, the postcard, and the working docs, in one place.">
+<meta property="og:image" content="posters/why-alive.jpg">
+<link rel="icon" href="alive-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080a;--panel:#0f1114;--panel2:#14171b;--line:#22262c;--gold:#FFD700;--green:#1E5F3B;--leaf:#185838;--live:#3ddc84;--txt:#eef0f2;--mut:#8a929c}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--txt);font-family:Geist,system-ui,sans-serif}
+body{background:radial-gradient(1200px 600px at 20% -10%,rgba(30,95,59,.35),transparent 60%),radial-gradient(900px 500px at 110% 10%,rgba(255,215,0,.08),transparent 60%),var(--bg);min-height:100vh}
+.wrap{max-width:1440px;margin:0 auto;padding:22px 26px 40px}
+header{display:flex;align-items:center;gap:18px;justify-content:space-between;margin-bottom:18px;position:sticky;top:0;z-index:20;padding:10px 0;backdrop-filter:blur(10px);background:linear-gradient(var(--bg),rgba(7,8,10,.72))}
+.brand{display:flex;align-items:center;gap:14px}.brand img{height:34px}
+.x{color:var(--mut);font-weight:300;font-size:22px}.inf{font-weight:800;letter-spacing:.5px;font-size:20px}
+.fm{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,215,0,.4);padding:5px 10px;border-radius:999px}
+.topnav{display:flex;gap:8px;align-items:center}
+.topnav a{color:var(--mut);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:1px solid transparent}
+.topnav a:hover{color:var(--txt);border-color:var(--line);background:var(--panel)}
+.topnav a.on{color:#fff;border-color:rgba(30,95,59,.7);background:rgba(30,95,59,.4)}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:8px 0 0}
+h1{font-size:38px;margin:8px 0 8px;font-weight:700;letter-spacing:-.7px;line-height:1.15}
+h1 span{color:var(--gold)}
+.sub{color:var(--mut);margin:0 0 22px;font-size:16px;max-width:720px;line-height:1.55}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.jump a{color:var(--txt);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.4px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel)}
+.jump a:hover{border-color:rgba(61,220,132,.45);color:var(--live)}
+.section{margin:8px 0 42px}
+.section h2{margin:0 0 6px;font-size:13px;letter-spacing:2.2px;text-transform:uppercase;color:var(--mut);font-weight:600}
+.section .lede{color:var(--mut);font-size:14px;margin:0 0 16px;line-height:1.5}
+.links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.lcard{display:flex;flex-direction:column;gap:8px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;text-decoration:none;color:var(--txt);min-height:140px;transition:.2s}
+.lcard:hover{border-color:rgba(61,220,132,.45);transform:translateY(-2px)}
+.lcard .k{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);font-weight:700}
+.lcard b{font-size:16px;font-weight:700;letter-spacing:-.2px}
+.lcard p{margin:0;color:var(--mut);font-size:13px;line-height:1.45;flex:1}
+.lcard .go{font-size:12px;color:var(--live);font-weight:600}
+.group{margin:0 0 28px}
+.group h3{margin:0 0 4px;font-size:20px;font-weight:700;letter-spacing:-.3px}
+.group .hint{color:var(--mut);font-size:13px;margin:0 0 16px;line-height:1.5}
+.wide-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.vcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px 14px 16px}
+.vcard.full{grid-column:1/-1}
+.vcard .meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:10px 2px 4px}
+.vcard h4{margin:0;font-size:16px;font-weight:700}
+.vcard .len{font-family:'Geist Mono',monospace;font-size:12px;color:var(--mut)}
+.vcard .desc{margin:0 2px;color:var(--mut);font-size:13px;line-height:1.5}
+.frame{background:#000;border-radius:12px;overflow:hidden;border:1px solid #222;position:relative}
+.frame video{width:100%;height:auto;display:block;background:#000;vertical-align:middle}
+.ads{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;align-items:start}
+.ad-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px 14px 16px;display:flex;flex-direction:column}
+.phone-wrap{display:flex;justify-content:center;margin-bottom:10px}
+.phone{width:100%;max-width:260px;aspect-ratio:9/16;border-radius:28px;overflow:hidden;border:1px solid #2a2e34;background:#000;box-shadow:0 24px 50px -24px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04);position:relative}
+.phone video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.ad-card .meta{margin:4px 2px 4px}
+.ad-card h4{margin:0;font-size:14px;font-weight:700}
+.ad-card .len{font-family:'Geist Mono',monospace;font-size:11px;color:var(--mut)}
+.ad-card .desc{margin:0 2px;color:var(--mut);font-size:12.5px;line-height:1.45;flex:1}
+.seg{display:flex;gap:6px;margin:10px 0 0}
+.seg button{flex:1;font-family:inherit;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--mut);padding:6px 0;cursor:pointer}
+.seg button.on{color:#fff;border-color:rgba(30,95,59,.7);background:rgba(30,95,59,.4)}
+.concept .frame{outline:1px dashed rgba(255,215,0,.35);outline-offset:0}
+.tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:5px;vertical-align:middle}
+.tag.concept{background:rgba(255,215,0,.12);color:var(--gold);border:1px solid rgba(255,215,0,.35)}
+.note{font-size:12px;color:var(--mut);margin:8px 0 0;line-height:1.5}
+.photos{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.photos.cols3{grid-template-columns:repeat(3,1fr)}
+.photos.cols4{grid-template-columns:repeat(4,1fr)}
+.photos a{display:block;position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--panel2);aspect-ratio:4/3}
+.photos a img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.photos a:hover img{transform:scale(1.04)}
+.photos a .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-size:11px;font-weight:600;color:#fff}
+.pcs{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:980px}
+.pcs a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:12px;text-decoration:none;color:var(--txt)}
+.pcs img{width:100%;border-radius:10px;border:1px solid #333;display:block}
+.pcs .cap{margin:10px 2px 0;font-size:13px;font-weight:600}
+.pcs .warn{margin:4px 2px 0;font-size:12px;color:var(--gold);line-height:1.45}
+.warn-banner{background:rgba(255,215,0,.08);border:1px solid rgba(255,215,0,.3);color:#ffe9a8;border-radius:12px;padding:10px 14px;font-size:13px;margin:0 0 14px;line-height:1.5}
+footer{margin-top:8px;color:var(--mut);font-size:11px;line-height:1.6}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:32px;flex-direction:column;gap:12px}
+#lb.show{display:flex}
+#lb img{max-width:min(1200px,96vw);max-height:82vh;border-radius:12px;box-shadow:0 20px 80px rgba(0,0,0,.5)}
+#lb .lbc{color:#fff;font-size:14px;font-weight:600}
+#lb .close{position:absolute;top:16px;right:20px;background:transparent;border:0;color:#fff;font-size:28px;cursor:pointer;line-height:1}
+@media(max-width:1200px){.ads{grid-template-columns:repeat(3,1fr)}.links{grid-template-columns:repeat(2,1fr)}.photos{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){header{flex-wrap:wrap}.topnav{order:3;width:100%}.wide-grid,.pcs{grid-template-columns:1fr}h1{font-size:28px}.ads{grid-template-columns:repeat(2,1fr)}.photos,.photos.cols4,.photos.cols3{grid-template-columns:repeat(2,1fr)}.vcard.full{grid-column:auto}}
+@media(max-width:560px){.ads{grid-template-columns:1fr}.links{grid-template-columns:1fr}.wrap{padding:16px 16px 32px}.phone{max-width:280px;margin:0 auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><span class="inf">INFINITE AI</span><span class="x">×</span><img src="alive-white.png" alt="ALIVE"><span class="fm">Force Multiplier</span></div>
+  <nav class="topnav">
+    <a href="index.html">Dashboard</a>
+    <a href="package.html" class="on">The Package</a>
+  </nav>
+</header>
+
+<p class="eyebrow">Infinite AI × ALIVE Studios</p>
+<h1>The Package. <span>Everything we made</span>, in one place.</h1>
+<p class="sub">Final cuts of every video, ALIVE’s own photos, the draft postcard, concept images, and the working docs. Built for the conversation with Brandon — and ready to share.</p>
+<nav class="jump">
+  <a href="#docs">Docs &amp; links</a>
+  <a href="#videos">Videos</a>
+  <a href="#photos">Photos</a>
+  <a href="#postcard">Postcard</a>
+  <a href="#muse">Concept images</a>
+</nav>
+
+<section class="section" id="docs">
+  <h2>Docs &amp; links</h2>
+  <p class="lede">The written work and source lists, ready to open.</p>
+  <div class="links">
+    <a class="lcard" href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/56a08167-d32c-416b-99a4-da3c88d7b42d" target="_blank" rel="noopener">
+      <span class="k">Playbook</span>
+      <b>The ALIVE playbook</b>
+      <p>How the local outbound engine would work around each studio.</p>
+      <span class="go">Open the Page →</span>
+    </a>
+    <a class="lcard" href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/dfcf7914-a65b-4c85-85f7-4e0e5bb7ea3e" target="_blank" rel="noopener">
+      <span class="k">Gallery</span>
+      <b>Full photo gallery</b>
+      <p>A wider set of ALIVE’s real photos and stills, organized for review.</p>
+      <span class="go">Open the Page →</span>
+    </a>
+    <a class="lcard" href="https://docs.google.com/document/d/1cr3qAXbVi1-88xS3KPatr8-63rS5abyUHdSNP-aR-Ao/edit" target="_blank" rel="noopener">
+      <span class="k">Proposal</span>
+      <b>The proposal</b>
+      <p>The offer, the 45-day build, and what ALIVE would own at the end.</p>
+      <span class="go">Open the Doc →</span>
+    </a>
+    <a class="lcard" href="https://docs.google.com/spreadsheets/d/1RQMe0lyv1u40mtlNULU8b60UyXZi1bkJPB673PJVHl0/edit" target="_blank" rel="noopener">
+      <span class="k">Las Colinas</span>
+      <b>Nearby businesses</b>
+      <p>The real list of businesses around the Las Colinas studio.</p>
+      <span class="go">Open the Sheet →</span>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="videos">
+  <h2>Videos</h2>
+  <p class="lede">The newest final cut of each piece. Ads are shown in the 9:16 format they’d run on Instagram, TikTok and Meta. A few also have a 16:9 cut for the website or a meeting screen.</p>
+
+  <div class="group" id="agent">
+    <h3>The agent in action</h3>
+    <p class="hint">A walkthrough of the ALIVE Growth Agent — the core of the offer.</p>
+    <div class="vcard full" id="demo">
+      <div class="frame">
+        <video controls preload="metadata" poster="posters/agent-demo.jpg" src="videos/agent-demo.mp4" playsinline></video>
+      </div>
+      <div class="meta"><h4>Agent demo</h4><span class="len">2:05 · 16:9</span></div>
+      <p class="desc">The ALIVE Growth Agent at work around Las Colinas: it finds the businesses, asks the studio to approve each batch, then works them with mail, email, texts, calls and ads. Play this in the meeting.</p>
+    </div>
+  </div>
+
+  <div class="group" id="films">
+    <h3>Brand films</h3>
+    <p class="hint">Short films about the studio itself — why ALIVE exists, and what it feels like to walk in.</p>
+    <div class="wide-grid">
+      <article class="vcard" id="why-alive">
+        <div class="frame">
+          <video controls preload="metadata" poster="posters/why-alive.jpg" src="videos/why-alive.mp4" playsinline></video>
+        </div>
+        <div class="meta"><h4>Why ALIVE</h4><span class="len">1:07 · 16:9</span></div>
+        <p class="desc">A short film about why ALIVE was created and who it’s for. It opens on “The room is part of the class.” For the website, a studio screen, or the start of a visit.</p>
+      </article>
+      <article class="vcard" id="presenter">
+        <div class="frame">
+          <video controls preload="metadata" poster="posters/ai-presenter.jpg" src="videos/ai-presenter.mp4" playsinline></video>
+        </div>
+        <div class="meta"><h4>Honest AI presenter</h4><span class="len">1:06 · 16:9</span></div>
+        <p class="desc">An AI presenter who admits it feels strange at first, then shares what members actually say — real reviews and studio ratings. Labeled AI-generated the whole way through. For paid social or a landing page.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="group" id="ads">
+    <h3>Ads</h3>
+    <p class="hint">Short social ads. A, B and C open on the same hook, then offer a free class to a different neighbor. D and E are brand and first-timer ads.</p>
+    <div class="ads">
+      <article class="ad-card" id="ad-a" data-src9="videos/ad-a-9x16.mp4" data-poster9="posters/ad-a-9x16.jpg" data-src16="videos/ad-a-16x9.mp4" data-poster16="posters/ad-a-16x9.jpg">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-a-9x16.jpg" src="videos/ad-a-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad A · 3PM offices</h4><span class="len">0:25</span></div>
+        <p class="desc">Opens “This isn’t a yoga class,” then offers nearby offices a free class for their team, timed for the afternoon slump. For Instagram, TikTok and Meta around each studio.</p>
+        <div class="seg"><button type="button" class="on" data-a="9x16">9:16</button><button type="button" data-a="16x9">16:9</button></div>
+      </article>
+      <article class="ad-card" id="ad-b">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-b-9x16.jpg" src="videos/ad-b-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad B · Resident perk</h4><span class="len">0:25 · 9:16</span></div>
+        <p class="desc">The same hook, then a free class for residents — made for property managers and apartment communities. For those inboxes and local social.</p>
+      </article>
+      <article class="ad-card" id="ad-c" data-src9="videos/ad-c-9x16.mp4" data-poster9="posters/ad-c-9x16.jpg" data-src16="videos/ad-c-16x9.mp4" data-poster16="posters/ad-c-16x9.jpg">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-c-9x16.jpg" src="videos/ad-c-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad C · Neighbor perk</h4><span class="len">0:24</span></div>
+        <p class="desc">The same hook, then a free class for people who work or live nearby. For local Meta and Instagram around each studio.</p>
+        <div class="seg"><button type="button" class="on" data-a="9x16">9:16</button><button type="button" data-a="16x9">16:9</button></div>
+      </article>
+      <article class="ad-card" id="ad-d">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-d-9x16.jpg" src="videos/ad-d-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad D · The room does the work</h4><span class="len">0:27 · 9:16</span></div>
+        <p class="desc">“Yoga, but the room does the work.” A brand ad about the heat, the video wall, and sound and light in sync. For paid social.</p>
+      </article>
+      <article class="ad-card" id="ad-e">
+        <div class="phone-wrap"><div class="phone frame"><video controls preload="metadata" poster="posters/ad-e-9x16.jpg" src="videos/ad-e-9x16.mp4" playsinline></video></div></div>
+        <div class="meta"><h4>Ad E · First-timer</h4><span class="len">0:28 · 9:16</span></div>
+        <p class="desc">For people new to hot yoga: “Never done hot yoga? Perfect. Start here.” Mentions the first 31 days at $24.99. For prospecting and retargeting.</p>
+      </article>
+    </div>
+    <p class="note">End cards still say “[booking link]” — a placeholder until ALIVE provides the real URL.</p>
+  </div>
+
+  <div class="group concept" id="concept">
+    <h3>Concept <span class="tag concept">AI recreation · concept only</span></h3>
+    <p class="hint">Not their real studio, and no real faces. A taste of how campaign creative could look, kept on the side.</p>
+    <article class="vcard" id="recreation">
+      <div class="frame">
+        <video controls preload="metadata" poster="posters/ai-recreation.jpg" src="videos/ai-recreation.mp4" playsinline></video>
+      </div>
+      <div class="meta"><h4>AI studio recreation</h4><span class="len">0:19 · 16:9</span></div>
+      <p class="desc">An AI-made walk through a studio in ALIVE’s colors, with the line “Yoga, but the room does the work.” This is a concept, not a picture of an ALIVE room.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="photos">
+  <h2>ALIVE’s photos</h2>
+  <p class="lede">Eighteen of ALIVE’s own photos, grouped the way we reviewed them. Click any picture to enlarge it.</p>
+
+  <div class="group">
+    <h3>Founders</h3>
+    <p class="hint">Brandon and the team, as ALIVE shows them.</p>
+    <div class="photos cols3">
+      <a href="photos/01-founders.jpg" data-lb="Founders"><img src="thumbs/01-founders.jpg" alt="Founders"><span class="cap">Founders</span></a>
+    </div>
+  </div>
+  <div class="group">
+    <h3>The studios</h3>
+    <p class="hint">Las Colinas, Plano and Southlake from the outside.</p>
+    <div class="photos cols3">
+      <a href="photos/02-ext-lascolinas.jpg" data-lb="Las Colinas"><img src="thumbs/02-ext-lascolinas.jpg" alt="Las Colinas exterior"><span class="cap">Las Colinas</span></a>
+      <a href="photos/03-ext-plano.jpg" data-lb="Plano"><img src="thumbs/03-ext-plano.jpg" alt="Plano exterior"><span class="cap">Plano</span></a>
+      <a href="photos/04-ext-southlake.jpg" data-lb="Southlake"><img src="thumbs/04-ext-southlake.jpg" alt="Southlake exterior"><span class="cap">Southlake</span></a>
+    </div>
+  </div>
+  <div class="group">
+    <h3>Inside the room</h3>
+    <p class="hint">The lobby moss wall, the practice room, and the ceiling and sky screens.</p>
+    <div class="photos cols4">
+      <a href="photos/05-lobby-mosswall.jpg" data-lb="Lobby moss wall"><img src="thumbs/05-lobby-mosswall.jpg" alt="Lobby moss wall"><span class="cap">Lobby moss wall</span></a>
+      <a href="photos/06-room-empty.jpg" data-lb="The practice room"><img src="thumbs/06-room-empty.jpg" alt="The practice room"><span class="cap">The practice room</span></a>
+      <a href="photos/07-room-ceiling.jpg" data-lb="Ceiling screens"><img src="thumbs/07-room-ceiling.jpg" alt="Ceiling screens"><span class="cap">Ceiling screens</span></a>
+      <a href="photos/08-room-skyscreens.jpg" data-lb="Sky screens"><img src="thumbs/08-room-skyscreens.jpg" alt="Sky screens"><span class="cap">Sky screens</span></a>
+    </div>
+  </div>
+  <div class="group">
+    <h3>Classes &amp; the video wall</h3>
+    <p class="hint">What it looks like when the room is in session.</p>
+    <div class="photos">
+      <a href="photos/09-wall-class.jpg" data-lb="Class at the video wall"><img src="thumbs/09-wall-class.jpg" alt="Class at the video wall"><span class="cap">Class at the wall</span></a>
+      <a href="photos/10-wall-group.jpg" data-lb="Group at the wall"><img src="thumbs/10-wall-group.jpg" alt="Group at the wall"><span class="cap">Group at the wall</span></a>
+      <a href="photos/11-wall-wide-cw33.jpg" data-lb="The room, wide"><img src="thumbs/11-wall-wide-cw33.jpg" alt="The room, wide"><span class="cap">The room, wide</span></a>
+      <a href="photos/12-class-group.jpg" data-lb="Group class"><img src="thumbs/12-class-group.jpg" alt="Group class"><span class="cap">Group class</span></a>
+      <a href="photos/13-class-coach.jpg" data-lb="A coached class"><img src="thumbs/13-class-coach.jpg" alt="A coached class"><span class="cap">A coached class</span></a>
+      <a href="photos/14-class-wide.jpg" data-lb="Class, wide"><img src="thumbs/14-class-wide.jpg" alt="Class, wide"><span class="cap">Class, wide</span></a>
+    </div>
+  </div>
+  <div class="group">
+    <h3>Brand &amp; class art</h3>
+    <p class="hint">Class art, the coached-vs-immersive explainer, and the logo.</p>
+    <div class="photos cols4">
+      <a href="photos/15-art-atom.jpg" data-lb="Atom"><img src="thumbs/15-art-atom.jpg" alt="Atom class art"><span class="cap">Atom</span></a>
+      <a href="photos/16-art-particle.jpg" data-lb="Particle"><img src="thumbs/16-art-particle.jpg" alt="Particle class art"><span class="cap">Particle</span></a>
+      <a href="photos/17-coached-vs-immersive.jpg" data-lb="Coached vs immersive"><img src="thumbs/17-coached-vs-immersive.jpg" alt="Coached vs immersive"><span class="cap">Coached vs immersive</span></a>
+      <a href="photos/18-logo.jpg" data-lb="ALIVE logo"><img src="thumbs/18-logo.jpg" alt="ALIVE logo"><span class="cap">Logo</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="postcard">
+  <h2>Postcard</h2>
+  <p class="lede">The neighbor-perk mailer, front and back. This is a draft.</p>
+  <div class="warn-banner">Draft: the front photo includes a child and will be swapped for a real ALIVE photo before any printing.</div>
+  <div class="pcs">
+    <a href="photos/postcard-front.jpg" data-lb="Postcard front — draft, photo will be swapped">
+      <img src="photos/postcard-front.jpg" alt="Postcard front">
+      <div class="cap">Front</div>
+      <div class="warn">Draft: front photo will be swapped for a real ALIVE photo.</div>
+    </a>
+    <a href="photos/postcard-back.jpg" data-lb="Postcard back">
+      <img src="photos/postcard-back.jpg" alt="Postcard back">
+      <div class="cap">Back</div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="muse">
+  <h2>Concept ad images</h2>
+  <p class="lede">Three stills from Chase’s Muse agent. Concept only — not official ALIVE photography.</p>
+  <div class="photos cols3">
+    <a href="muse/muse-1.jpg" data-lb="Concept ad image 1"><img src="thumbs/muse-1.jpg" alt="Concept ad image 1"><span class="cap">Concept 1</span></a>
+    <a href="muse/muse-2.jpg" data-lb="Concept ad image 2"><img src="thumbs/muse-2.jpg" alt="Concept ad image 2"><span class="cap">Concept 2</span></a>
+    <a href="muse/muse-3.jpg" data-lb="Concept ad image 3"><img src="thumbs/muse-3.jpg" alt="Concept ad image 3"><span class="cap">Concept 3</span></a>
+  </div>
+</section>
+
+<footer>Nothing here has been posted or sent. Built by Infinite AI · myinfinite.ai · <a href="index.html" style="color:var(--live)">Back to the dashboard</a></footer>
+</div>
+
+<div id="lb" role="dialog" aria-modal="true"><button class="close" aria-label="Close">&times;</button><img alt=""><div class="lbc"></div></div>
+<script>
+const videos = [...document.querySelectorAll("video")];
+videos.forEach(v => v.addEventListener("play", () => videos.forEach(o => { if (o !== v) o.pause(); })));
+
+document.querySelectorAll(".ad-card .seg").forEach(seg => {
+  const card = seg.closest(".ad-card");
+  const frame = card.querySelector(".phone, .frame");
+  const video = card.querySelector("video");
+  const wrap = card.querySelector(".phone-wrap");
+  seg.querySelectorAll("button").forEach(btn => btn.addEventListener("click", () => {
+    const a = btn.dataset.a;
+    seg.querySelectorAll("button").forEach(b => b.classList.toggle("on", b === btn));
+    const paused = video.paused;
+    const t = video.currentTime;
+    if (a === "16x9") {
+      wrap.style.display = "block";
+      frame.classList.remove("phone");
+      frame.style.aspectRatio = "16/9";
+      frame.style.maxWidth = "100%";
+      frame.style.borderRadius = "12px";
+      video.style.objectFit = "contain";
+      video.poster = card.dataset.poster16;
+      video.src = card.dataset.src16;
+    } else {
+      frame.classList.add("phone");
+      frame.style.aspectRatio = "";
+      frame.style.maxWidth = "";
+      frame.style.borderRadius = "";
+      video.style.objectFit = "cover";
+      video.poster = card.dataset.poster9;
+      video.src = card.dataset.src9;
+    }
+    video.currentTime = t;
+    if (!paused) video.play();
+  }));
+});
+
+const lb = document.getElementById("lb");
+const lbImg = lb.querySelector("img");
+const lbCap = lb.querySelector(".lbc");
+function openLb(href, cap){ lbImg.src = href; lbImg.alt = cap || ""; lbCap.textContent = cap || ""; lb.classList.add("show"); }
+function closeLb(){ lb.classList.remove("show"); lbImg.src = ""; }
+document.querySelectorAll("a[data-lb]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); openLb(a.getAttribute("href"), a.dataset.lb); }));
+lb.addEventListener("click", e => { if (e.target === lb || e.target.classList.contains("close")) closeLb(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); });
+</script>
+</body>
+</html>

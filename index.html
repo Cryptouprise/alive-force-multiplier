@@ -87,13 +87,46 @@ h1{font-size:30px;margin:4px 0 2px;font-weight:700;letter-spacing:-.5px}h1 span{
 header{position:sticky;top:0;z-index:5;padding:10px 0;backdrop-filter:blur(10px);background:linear-gradient(var(--bg),rgba(7,8,10,.6))}
 footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
 @media(max-width:1300px){.grid3{grid-template-columns:1fr 1fr}.side{grid-column:1/-1;grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(4,1fr)}}
+
+.topnav{display:flex;gap:8px;align-items:center}
+.topnav a{color:var(--mut);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:1px solid transparent}
+.topnav a:hover{color:var(--txt);border-color:var(--line);background:var(--panel)}
+.topnav a.on{color:#fff;border-color:rgba(30,95,59,.7);background:rgba(30,95,59,.4)}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:-6px 0 20px}
+.btn-pack{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#2a7a4c,var(--green));color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 16px;border-radius:12px;border:1px solid rgba(61,220,132,.35);box-shadow:0 10px 30px -16px rgba(61,220,132,.6)}
+.btn-pack:hover{filter:brightness(1.08)}
+.pack-band{margin-top:22px}
+.pack-band .band-h{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.pack-band h2{margin:0;font-size:22px;letter-spacing:-.3px}
+.pack-band .lede{color:var(--mut);font-size:14px;margin:4px 0 0;max-width:640px}
+.pack-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.pack-links a{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--txt);display:flex;flex-direction:column;gap:4px}
+.pack-links a:hover{border-color:rgba(61,220,132,.45)}
+.pack-links .k{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);font-weight:700}
+.pack-links b{font-size:14px}
+.pack-links span{color:var(--mut);font-size:12px}
+.pack-vids{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.pack-vids a{display:block;text-decoration:none;color:var(--txt);background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.pack-vids a:hover{border-color:rgba(61,220,132,.45)}
+.pack-vids img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+.pack-vids a.vert img{aspect-ratio:9/16}
+.pack-vids .pc{padding:8px 10px 10px}
+.pack-vids b{display:block;font-size:12px;font-weight:700}
+.pack-vids small{color:var(--mut);font-size:11px}
+@media(max-width:1100px){.pack-links{grid-template-columns:repeat(2,1fr)}.pack-vids{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){header{flex-wrap:wrap}.topnav{order:3;width:100%}.pack-vids{grid-template-columns:repeat(2,1fr)}}
 </style></head><body><div class="wrap">
 <header>
   <div class="brand"><span class="inf">INFINITE AI</span><span class="x">×</span><img src="alive-white.png" alt="ALIVE"><span class="fm">Force Multiplier</span></div>
+  <nav class="topnav">
+    <a href="index.html" class="on">Dashboard</a>
+    <a href="package.html">The Package</a>
+  </nav>
   <div class="agent"><span class="live"></span><div><b>ALIVE Growth Agent</b><small>Own computer · Las Colinas · Day <span id="dayn">1</span></small></div><span class="mono" id="clock" style="color:var(--mut);font-size:12px"></span><span class="demo">DEMO</span></div>
 </header>
 <h1>One agent. Working Las Colinas <span>every day</span>, steady, not overbearing.</h1>
 <p class="sub">It finds every business around the studio, checks the data, asks the studio manager to approve each batch, then works them at a steady daily pace with mail, email, texts, calls and retargeting. When the radius runs out, we clone it.</p>
+<div class="hero-actions"><a class="btn-pack" href="package.html">See the full package — videos, photos, and links →</a></div>
 
 <div class="kpis">
   <div class="kpi"><span class="tag real">REAL</span><div class="v" id="k_found">0</div><div class="l">Businesses found (0.5 mi)</div></div>
@@ -154,6 +187,33 @@ footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
   </div>
 <div class="card"><h3>Inbound call · handled by AI <span class="tag dm">DEMO</span></h3><div id="call" class="call"></div></div>
   <div class="card"><h3>Mailer proof · Neighbor perk</h3><div class="pc"><img src="postcard-front.jpg" alt="Postcard front"><img src="postcard-back.jpg" alt="Postcard back"></div></div>
+</div>
+
+<div class="pack-band" id="package">
+  <div class="band-h">
+    <div>
+      <h2>The Package</h2>
+      <p class="lede">Every final-cut video, ALIVE’s photos, the draft postcard, concept images, and the working docs — organized in one place.</p>
+    </div>
+    <a class="btn-pack" href="package.html">Open the full package →</a>
+  </div>
+  <div class="pack-links">
+    <a href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/56a08167-d32c-416b-99a4-da3c88d7b42d" target="_blank" rel="noopener"><span class="k">Playbook</span><b>The ALIVE playbook</b><span>How the outbound engine would work.</span></a>
+    <a href="https://cursor.com/canvas/store-dbdb4ad5-15e8-498c-b44e-63bed618efdd/dfcf7914-a65b-4c85-85f7-4e0e5bb7ea3e" target="_blank" rel="noopener"><span class="k">Gallery</span><b>Full photo gallery</b><span>ALIVE’s real photos, organized.</span></a>
+    <a href="https://docs.google.com/document/d/1cr3qAXbVi1-88xS3KPatr8-63rS5abyUHdSNP-aR-Ao/edit" target="_blank" rel="noopener"><span class="k">Proposal</span><b>The proposal</b><span>The offer and the 45-day build.</span></a>
+    <a href="https://docs.google.com/spreadsheets/d/1RQMe0lyv1u40mtlNULU8b60UyXZi1bkJPB673PJVHl0/edit" target="_blank" rel="noopener"><span class="k">Las Colinas</span><b>Nearby businesses</b><span>The real list around the studio.</span></a>
+  </div>
+  <div class="pack-vids">
+    <a href="package.html#demo"><img src="posters/agent-demo.jpg" alt="Agent demo"><div class="pc"><b>Agent demo</b><small>2:05 · The agent in action</small></div></a>
+    <a href="package.html#why-alive"><img src="posters/why-alive.jpg" alt="Why ALIVE"><div class="pc"><b>Why ALIVE</b><small>1:07 · Brand film</small></div></a>
+    <a href="package.html#presenter"><img src="posters/ai-presenter.jpg" alt="Honest AI presenter"><div class="pc"><b>AI presenter</b><small>1:06 · Brand film</small></div></a>
+    <a class="vert" href="package.html#ad-a"><img src="posters/ad-a-9x16.jpg" alt="Ad A"><div class="pc"><b>Ad A · 3PM offices</b><small>0:25 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-b"><img src="posters/ad-b-9x16.jpg" alt="Ad B"><div class="pc"><b>Ad B · Resident perk</b><small>0:25 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-c"><img src="posters/ad-c-9x16.jpg" alt="Ad C"><div class="pc"><b>Ad C · Neighbor perk</b><small>0:24 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-d"><img src="posters/ad-d-9x16.jpg" alt="Ad D"><div class="pc"><b>Ad D · The room</b><small>0:27 · 9:16</small></div></a>
+    <a class="vert" href="package.html#ad-e"><img src="posters/ad-e-9x16.jpg" alt="Ad E"><div class="pc"><b>Ad E · First-timer</b><small>0:28 · 9:16</small></div></a>
+    <a href="package.html#recreation"><img src="posters/ai-recreation.jpg" alt="AI recreation"><div class="pc"><b>AI recreation</b><small>0:19 · Concept only</small></div></a>
+  </div>
 </div>
 <footer>REAL: 217 businesses within 0.5 mi of ALIVE Las Colinas, 216 validated mailing addresses, 55 emails, and the segment counts, all from a Nov 19, 2026 trial scrape. DEMO: approvals, mailers, replies, meetings, members and the activity feed are simulated for illustration. Nothing has been sent. Built by Infinite AI · myinfinite.ai</footer>
 </div>

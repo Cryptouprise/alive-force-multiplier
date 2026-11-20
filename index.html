@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Infinite AI × ALIVE — Force Multiplier · ALIVE Growth Agent</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080a;--panel:#0f1114;--panel2:#14171b;--line:#22262c;--gold:#FFD700;--green:#1E5F3B;--live:#3ddc84;--txt:#eef0f2;--mut:#8a929c}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--txt);font-family:Geist,system-ui,sans-serif}
+body{background:radial-gradient(1200px 600px at 20% -10%,rgba(30,95,59,.35),transparent 60%),radial-gradient(900px 500px at 110% 10%,rgba(255,215,0,.08),transparent 60%),var(--bg);min-height:100vh}
+.wrap{max-width:1440px;margin:0 auto;padding:22px 26px 40px}
+header{display:flex;align-items:center;gap:18px;justify-content:space-between;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:14px}.brand img{height:34px}
+.x{color:var(--mut);font-weight:300;font-size:22px}.inf{font-weight:800;letter-spacing:.5px;font-size:20px}
+.fm{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,215,0,.4);padding:5px 10px;border-radius:999px}
+.agent{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);padding:10px 14px;border-radius:14px}
+.live{width:10px;height:10px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 rgba(61,220,132,.7);animation:lp 1.6s infinite}
+@keyframes lp{70%{box-shadow:0 0 0 10px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+.agent b{font-size:14px}.agent small{display:block;color:var(--mut);font-size:11px}
+.mono{font-family:'Geist Mono',monospace}
+.demo{font-size:11px;color:#111;background:var(--gold);padding:3px 8px;border-radius:6px;font-weight:700}
+h1{font-size:30px;margin:4px 0 2px;font-weight:700;letter-spacing:-.5px}h1 span{color:var(--gold)}
+.sub{color:var(--mut);margin:0 0 18px;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;margin-bottom:16px}
+.kpi{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:12px 14px;position:relative;overflow:hidden}
+.kpi .v{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums}.kpi .l{color:var(--mut);font-size:12px;margin-top:2px}
+.tag{font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:5px;vertical-align:middle}
+.tag.real{background:rgba(61,220,132,.15);color:var(--live);border:1px solid rgba(61,220,132,.4)}
+.tag.dm{background:rgba(255,215,0,.12);color:var(--gold);border:1px solid rgba(255,215,0,.35)}
+.kpi .tag{position:absolute;top:10px;right:10px}
+.grid3{display:grid;grid-template-columns:560px 1fr 380px;gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px}
+.card h3{margin:0 0 10px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);font-weight:600;display:flex;justify-content:space-between;align-items:center}
+#map{width:100%;height:auto;display:block;background:radial-gradient(circle at 50% 50%,#0f1a14,#08090b 70%);border-radius:12px}
+.grid{stroke:#ffffff08}.ring{fill:none;stroke:rgba(255,215,0,.45);stroke-dasharray:4 5}.ringlbl{fill:var(--gold);font-size:11px;font-family:'Geist Mono'}
+.pinlbl{fill:#fff;font-size:11px;font-weight:600}.pinpulse,.sweep{transform-box:view-box}.pinpulse{fill:rgba(255,215,0,.25);animation:pp 2s infinite;transform-origin:260px 260px}
+@keyframes pp{0%{transform:scale(.6);opacity:1}100%{transform:scale(2.6);opacity:0}}
+.sweep{transform-origin:260px 260px;animation:sw 6s linear infinite}@keyframes sw{to{transform:rotate(-360deg)}}
+.dot{transition:r .6s cubic-bezier(.2,1.6,.4,1);opacity:.92;stroke:#000;stroke-width:.6}
+.addr{color:var(--mut);font-size:12px;margin-top:8px}
+.segs{margin-top:12px;display:grid;gap:5px}.seg{display:grid;grid-template-columns:10px 1fr 120px 32px;gap:8px;align-items:center;font-size:12px}
+.sw{width:10px;height:10px;border-radius:3px}.sn{color:#cfd3d8}.bar{height:6px;background:#1b1f24;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%}.seg b{text-align:right;font-variant-numeric:tabular-nums}
+.pipe{display:grid;gap:6px}
+.st{display:grid;grid-template-columns:28px 1fr 96px;gap:10px;align-items:center;padding:7px 10px;border-radius:12px;background:var(--panel2);border:1px solid var(--line);position:relative}
+.st:not(:last-child)::after{content:"";position:absolute;left:23px;bottom:-7px;width:2px;height:8px;background:linear-gradient(var(--line),var(--green))}
+.sti{width:24px;height:24px;border-radius:8px;background:#1b1f24;display:grid;place-items:center;font-size:11px;color:var(--mut);font-family:'Geist Mono'}
+.stt{font-size:13px;font-weight:600}.std{font-size:11px;color:var(--mut)}
+.prog{height:3px;background:#1b1f24;border-radius:3px;margin-top:5px;overflow:hidden}.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--live));transition:width .8s}
+.stn{text-align:right}.stn b{font-size:17px;font-variant-numeric:tabular-nums}.stn small{display:block;font-size:10px;color:var(--mut)}
+.st.hot{animation:hot 1.2s ease-out}.st.hot .sti{background:var(--green);color:#fff}
+@keyframes hot{0%{border-color:var(--live);box-shadow:0 0 0 0 rgba(61,220,132,.35)}100%{border-color:var(--line);box-shadow:0 0 0 12px rgba(61,220,132,0)}}
+.side{display:grid;gap:14px;align-content:start}
+.slack{background:#1a1d21;border:1px solid #2c3036;border-radius:14px;padding:12px;transform:translateY(8px);opacity:.55;transition:.5s}
+.slack.show{transform:none;opacity:1;box-shadow:0 0 0 1px rgba(255,215,0,.5),0 20px 60px -20px rgba(255,215,0,.35)}
+.sh{display:flex;gap:10px;align-items:center;margin-bottom:8px}.av{width:34px;height:34px;border-radius:8px;background:var(--green);display:grid;place-items:center;font-weight:800;color:var(--gold)}
+.sh b{font-size:14px}.sh .app{font-size:10px;background:#2c3036;color:#aab;padding:1px 5px;border-radius:4px;margin-left:4px}.sh small{color:var(--mut);font-size:11px;display:block}
+#apbody{font-size:13px;line-height:1.5;color:#dde}.muted{color:var(--mut)}
+.thumbs{display:flex;gap:6px;margin:8px 0}.thumbs img{height:64px;border-radius:6px;border:1px solid #333}
+.btns{display:flex;gap:8px}.btn{flex:1;border:0;border-radius:8px;padding:9px;font-weight:700;font-family:inherit;cursor:pointer;font-size:13px}
+.ap{background:#2bac76;color:#fff}.rj{background:transparent;color:#e66;border:1px solid #e6666688}
+.apstate{font-size:12px;margin-top:8px}.apstate.wait{color:var(--gold)}.apstate.ok{color:var(--live)}.apstate.no{color:#e66}
+.via{font-size:11px;color:var(--mut);margin-top:6px}
+.caps{display:grid;gap:8px}.cap{display:grid;grid-template-columns:110px 1fr 54px;gap:8px;align-items:center;font-size:12px}
+.cap .bar{height:7px}.cap .bar i{background:linear-gradient(90deg,var(--green),var(--gold));transition:width .6s}
+.cap span:last-child{text-align:right;font-family:'Geist Mono';color:#cfd3d8}
+.steady{font-size:12px;color:var(--mut);margin-top:10px;line-height:1.5}.steady b{color:var(--gold)}
+.feedcard{margin-top:14px}
+#feed{height:230px;overflow:hidden;display:grid;align-content:start;gap:4px;mask-image:linear-gradient(#000 70%,transparent)}
+.ev{display:grid;grid-template-columns:24px 1fr 90px;gap:8px;font-size:13px;padding:6px 8px;border-radius:8px;background:var(--panel2);animation:in .5s ease-out}
+.ev.ok .tx{color:#bff3d4}.ev.warn .tx{color:#ffe98a}.ev.bad .tx{color:#ffb0b0}.ev.muted .tx{color:var(--mut)}
+.ev .ts{color:var(--mut);font-family:'Geist Mono';font-size:11px;text-align:right}
+@keyframes in{from{opacity:0;transform:translateY(-8px)}}
+.bottom{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.clones{display:flex;gap:10px;flex-wrap:wrap}
+.clone{background:var(--panel2);color:var(--txt);border:1px dashed rgba(255,215,0,.5);border-radius:12px;padding:12px 16px;font-family:inherit;font-size:14px;cursor:pointer;font-weight:600;transition:.3s}
+.clone:hover{background:#1b1f24}.clone.busy{border-style:solid;color:var(--gold)}.clone.done{border:1px solid var(--live);color:var(--live)}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid var(--gold);border-right-color:transparent;border-radius:50%;animation:r 1s linear infinite;vertical-align:-1px}@keyframes r{to{transform:rotate(360deg)}}
+.pc{display:flex;gap:10px}.pc img{width:50%;border-radius:10px;border:1px solid #333}
+footer{margin-top:16px;color:var(--mut);font-size:11px;line-height:1.6}
+@media(max-width:1300px){.grid3{grid-template-columns:1fr 1fr}.side{grid-column:1/-1;grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(4,1fr)}}
+</style></head><body><div class="wrap">
+<header>
+  <div class="brand"><span class="inf">INFINITE AI</span><span class="x">×</span><img src="alive-white.png" alt="ALIVE"><span class="fm">Force Multiplier</span></div>
+  <div class="agent"><span class="live"></span><div><b>ALIVE Growth Agent</b><small>Own computer · Las Colinas · Day <span id="dayn">1</span></small></div><span class="mono" id="clock" style="color:var(--mut);font-size:12px"></span><span class="demo">DEMO</span></div>
+</header>
+<h1>One agent. Working Las Colinas <span>every day</span>, steady, not overbearing.</h1>
+<p class="sub">It finds every business around the studio, checks the data, asks the studio manager to approve each batch, then works them at a steady daily pace with mail, email, texts, calls and retargeting. When the radius runs out, we clone it.</p>
+
+<div class="kpis">
+  <div class="kpi"><span class="tag real">REAL</span><div class="v" id="k_found">0</div><div class="l">Businesses found (0.5 mi)</div></div>
+  <div class="kpi"><span class="tag real">REAL</span><div class="v" id="k_valid">0</div><div class="l">Valid mailing addresses</div></div>
+  <div class="kpi"><span class="tag real">REAL</span><div class="v" id="k_emails">0</div><div class="l">Emails found</div></div>
+  <div class="kpi"><span class="tag dm">DEMO</span><div class="v" id="k_approved">0</div><div class="l">Approved by studio</div></div>
+  <div class="kpi"><span class="tag dm">DEMO</span><div class="v" id="k_mailed">0</div><div class="l">Mailers out</div></div>
+  <div class="kpi"><span class="tag dm">DEMO</span><div class="v" id="k_replies">0</div><div class="l">Replies</div></div>
+  <div class="kpi"><span class="tag dm">DEMO</span><div class="v" id="k_meetings">0</div><div class="l">Meetings booked</div></div>
+  <div class="kpi"><span class="tag dm">DEMO</span><div class="v" id="k_members">0</div><div class="l">Members from partners</div></div>
+</div>
+
+<div class="grid3">
+  <div class="card"><h3>Radius map <span class="tag real">REAL SCRAPE · 217 PLACES</span></h3>
+    <svg id="map" viewBox="0 0 520 520"></svg>
+    <div class="addr">📍 ALIVE Las Colinas · 975 W John Carpenter Fwy #109A, Irving, TX 75039 · next ring: 1 mi → 2 mi → 4 mi</div>
+    <div class="segs" id="segs"></div>
+  </div>
+  <div class="card"><h3>The pipeline <span class="muted" style="letter-spacing:0;text-transform:none;font-size:11px">One business at a time, on a daily pace</span></h3><div class="pipe" id="pipe"></div></div>
+  <div class="side">
+    <div class="card"><h3>Approval request <span class="tag dm">MOCK</span></h3>
+      <div class="slack" id="approval">
+        <div class="sh"><div class="av">A</div><div><b>ALIVE Growth Agent <span class="app">APP</span></b><small>to Studio Manager · #las-colinas-growth</small></div></div>
+        <div id="apbody">Preparing the first batch…</div>
+        <div class="thumbs"><img src="postcard-front.jpg" alt="front"><img src="postcard-back.jpg" alt="back"></div>
+        <div class="btns"><button class="btn ap" id="btnApprove">Approve</button><button class="btn rj" id="btnReject">Reject</button></div>
+        <div class="apstate" id="apstate"></div>
+        <div class="via">Also via WhatsApp: reply <b>YES</b> or <b>NO</b></div>
+      </div>
+    </div>
+    <div class="card"><h3>Pacing · today's caps</h3>
+      <div class="caps">
+        <div class="cap"><span>📬 Mailers</span><span class="bar"><i id="cb_mail"></i></span><span id="c_mail"></span></div>
+        <div class="cap"><span>✉️ Emails</span><span class="bar"><i id="cb_email"></i></span><span id="c_email"></span></div>
+        <div class="cap"><span>💬 SMS</span><span class="bar"><i id="cb_sms"></i></span><span id="c_sms"></span></div>
+        <div class="cap"><span>📳 Voicemail</span><span class="bar"><i id="cb_rvm"></i></span><span id="c_rvm"></span></div>
+        <div class="cap"><span>📞 AI calls</span><span class="bar"><i id="cb_call"></i></span><span id="c_call"></span></div>
+      </div>
+      <div class="steady"><b>Steady, not overbearing.</b> At most 2–3 people per company, starts staggered 2–3 days apart, and any reply stops everyone at that company. About 30 emails per inbox per day, and a postcard always lands first.</div>
+    </div>
+  </div>
+</div>
+
+<div class="card feedcard"><h3>Live activity <span class="tag dm">SIMULATED · REAL BUSINESS NAMES FROM SCRAPE</span></h3><div id="feed"></div></div>
+
+<div class="bottom">
+  <div class="card"><h3>Clone to the next studio</h3>
+    <div class="clones"><button class="clone" data-city="Plano">＋ Clone to Plano · 4909 W Park Blvd</button><button class="clone" data-city="Southlake">＋ Clone to Southlake · 2140 E Southlake Blvd</button></div>
+    <div class="steady">Estimated businesses with employees within 4 miles: Las Colinas ~5,600 · Plano ~7,800 · Southlake ~4,600 (Census ZIP data, area-weighted estimate).</div>
+  </div>
+  <div class="card"><h3>Mailer proof · Neighbor perk</h3><div class="pc"><img src="postcard-front.jpg" alt="Postcard front"><img src="postcard-back.jpg" alt="Postcard back"></div></div>
+</div>
+<footer>REAL: 217 businesses within 0.5 mi of ALIVE Las Colinas, 216 validated mailing addresses, 55 emails, and the segment counts, all from a Nov 19, 2026 trial scrape. DEMO: approvals, mailers, replies, meetings, members and the activity feed are simulated for illustration. Nothing has been sent. Built by Infinite AI · myinfinite.ai</footer>
+</div>
+<script>window.PTS=[{"n": "CityVet | Las Colinas", "s": "Medical, chiro, PT, dental", "x": -0.0091, "y": 0.057, "e": 0}, {"n": "Alvin J. Aubry, Jr, MD", "s": "Medical, chiro, PT, dental", "x": -0.0113, "y": 0.0623, "e": 0}, {"n": "Bras\u00e3o Brazilian Steakhouse", "s": "Restaurants & cafes", "x": 0.0764, "y": -0.0105, "e": 1}, {"n": "The Ranch at Las Colinas", "s": "Restaurants & cafes", "x": 0.0717, "y": 0.0409, "e": 0}, {"n": "Delucca Gaucho Pizza & Wine Irving/Las Colinas", "s": "Restaurants & cafes", "x": 0.0507, "y": 0.0684, "e": 0}, {"n": "Martin Bionics Dallas", "s": "Medical, chiro, PT, dental", "x": -0.0699, "y": -0.0621, "e": 1}, {"n": "OMIYA SUSHI RAMEN HIBACHI", "s": "Restaurants & cafes", "x": 0.0352, "y": 0.0922, "e": 0}, {"n": "Milkshakes & More", "s": "Retail", "x": 0.0352, "y": 0.0922, "e": 1}, {"n": "Block Advisors", "s": "Offices & corporate", "x": 0.0336, "y": 0.0972, "e": 0}, {"n": "Shape Shift Health", "s": "Medical, chiro, PT, dental", "x": 0.0286, "y": 0.1124, "e": 0}, {"n": "Advanced Aesthetics Academy", "s": "Salons, spas, massage", "x": 0.0286, "y": 0.1124, "e": 0}, {"n": "Brantley Charles | Castle & Cooke Mortgage, LLC", "s": "Offices & corporate", "x": 0.0286, "y": 0.1124, "e": 1}, {"n": "Davinci Meeting Rooms", "s": "Salons, spas, massage", "x": 0.0151, "y": 0.1173, "e": 0}, {"n": "United Healthcare Authorized Agent/Irving Indepe", "s": "Medical, chiro, PT, dental", "x": 0.0255, "y": 0.1192, "e": 0}, {"n": "SoloShoe Communications, LLC", "s": "Offices & corporate", "x": 0.026, "y": 0.1191, "e": 0}, {"n": "65 Limes | Digital Marketing Management", "s": "Offices & corporate", "x": 0.026, "y": 0.1191, "e": 0}, {"n": "ASAP Personnel Services Temp Agency Irving, TX", "s": "Offices & corporate", "x": 0.026, "y": 0.1191, "e": 1}, {"n": "TCH Social - Las Colinas", "s": "Restaurants & cafes", "x": 0.0265, "y": 0.1202, "e": 0}, {"n": "Embassy Suites by Hilton Irving Las Colinas", "s": "Gyms & fitness (no yoga)", "x": 0.1255, "y": -0.0051, "e": 0}, {"n": "Las Colinas Village", "s": "Retail", "x": 0.0248, "y": 0.1235, "e": 0}, {"n": "Sonic Drive-In", "s": "Restaurants & cafes", "x": -0.1277, "y": -0.0654, "e": 0}, {"n": "Massage Envy", "s": "Salons, spas, massage", "x": 0.0157, "y": 0.1438, "e": 0}, {"n": "Continental Battery Systems Support Center", "s": "Retail", "x": 0.0354, "y": -0.1427, "e": 0}, {"n": "Birch Medical & Wellness", "s": "Medical, chiro, PT, dental", "x": 0.0118, "y": 0.1476, "e": 0}, {"n": "Cosmetic and Family Dentistry of Las Colinas", "s": "Medical, chiro, PT, dental", "x": 0.013, "y": 0.1489, "e": 0}, {"n": "Anup Naik", "s": "Medical, chiro, PT, dental", "x": 0.013, "y": 0.151, "e": 0}, {"n": "European Wax Center", "s": "Salons, spas, massage", "x": 0.0123, "y": 0.1555, "e": 0}, {"n": "Jam + Toast", "s": "Restaurants & cafes", "x": 0.0035, "y": 0.1608, "e": 0}, {"n": "IBM", "s": "Offices & corporate", "x": 0.0388, "y": -0.1585, "e": 0}, {"n": "CVS Caremark Corporate Office", "s": "Offices & corporate", "x": 0.0489, "y": -0.1567, "e": 1}, {"n": "MOURI Tech LLC", "s": "Offices & corporate", "x": 0.1714, "y": 0.0047, "e": 1}, {"n": "The Reserve - Las Colinas", "s": "Restaurants & cafes", "x": 0.0032, "y": 0.1784, "e": 0}, {"n": "Zale Corp", "s": "Offices & corporate", "x": -0.1159, "y": -0.1531, "e": 0}, {"n": "Service Fusion", "s": "Offices & corporate", "x": -0.1159, "y": -0.1526, "e": 0}, {"n": "Akili Inc.", "s": "Offices & corporate", "x": -0.1159, "y": -0.1526, "e": 0}, {"n": "RT7 Digital", "s": "Offices & corporate", "x": -0.1159, "y": -0.1526, "e": 1}, {"n": "Neelima Chirumamilla", "s": "Medical, chiro, PT, dental", "x": -0.0065, "y": 0.1959, "e": 0}, {"n": "University of St. Augustine for Health Sciences ", "s": "Schools, daycare, university", "x": -0.0987, "y": -0.1745, "e": 1}, {"n": "Hudson House", "s": "Restaurants & cafes", "x": -0.0603, "y": 0.1934, "e": 1}, {"n": "Starbucks Coffee Company", "s": "Restaurants & cafes", "x": -0.0652, "y": 0.1954, "e": 0}, {"n": "BT Global Services, Americas Headquarters", "s": "Offices & corporate", "x": -0.1044, "y": -0.1802, "e": 0}, {"n": "Skypass Travel", "s": "Offices & corporate", "x": -0.1931, "y": -0.0794, "e": 0}, {"n": "Boardroom Salon for Men - Las Colinas", "s": "Salons, spas, massage", "x": -0.0126, "y": 0.2091, "e": 0}, {"n": "Taziki's Mediterranean Cafe - Las Colinas", "s": "Restaurants & cafes", "x": -0.0169, "y": 0.2111, "e": 1}, {"n": "Mathnasium", "s": "Schools, daycare, university", "x": -0.0211, "y": 0.213, "e": 1}, {"n": "Carrie\u02bbs Pilates Las Colinas", "s": "Gyms & fitness (no yoga)", "x": -0.0211, "y": 0.213, "e": 0}, {"n": "IVX Health Infusion Center", "s": "Medical, chiro, PT, dental", "x": -0.0199, "y": 0.2146, "e": 0}, {"n": "Liberation Coffee Co.", "s": "Restaurants & cafes", "x": -0.0995, "y": -0.1923, "e": 0}, {"n": "Concentra Urgent Care", "s": "Medical, chiro, PT, dental", "x": -0.0185, "y": 0.2163, "e": 0}, {"n": "Nail Lounge at Las Colinas", "s": "Salons, spas, massage", "x": -0.0199, "y": 0.2207, "e": 0}, {"n": "VariSpace Las Colinas", "s": "Salons, spas, massage", "x": -0.0976, "y": -0.2032, "e": 0}, {"n": "Grand Venetian", "s": "Apartments, HOA, property", "x": 0.1008, "y": 0.2041, "e": 0}, {"n": "Identity Eyecare", "s": "Medical, chiro, PT, dental", "x": -0.0312, "y": 0.2287, "e": 0}, {"n": "Xiao Ling\u2019s Kitchen", "s": "Restaurants & cafes", "x": -0.0345, "y": 0.2318, "e": 0}, {"n": "Palm Beach Tan", "s": "Salons, spas, massage", "x": -0.0414, "y": 0.2352, "e": 0}, {"n": "Fifth Third Bank & ATM", "s": "Offices & corporate", "x": -0.2331, "y": -0.0689, "e": 0}, {"n": "Chop Sports Las Colinas", "s": "Restaurants & cafes", "x": -0.0488, "y": 0.2426, "e": 0}, {"n": "Cafe Hana", "s": "Restaurants & cafes", "x": -0.245, "y": -0.0999, "e": 0}, {"n": "Edoko Omakase", "s": "Restaurants & cafes", "x": -0.2496, "y": -0.0925, "e": 0}, {"n": "Heartland Montessori Academy", "s": "Schools, daycare, university", "x": -0.1946, "y": -0.199, "e": 1}, {"n": "Cenit Hub Inc.", "s": "Offices & corporate", "x": -0.2715, "y": -0.076, "e": 0}, {"n": "Peregrine", "s": "Apartments, HOA, property", "x": 0.2642, "y": 0.1001, "e": 0}, {"n": "British Swim School of Las Colinas LA Fitness", "s": "Schools, daycare, university", "x": -0.2372, "y": -0.1674, "e": 1}, {"n": "LA Fitness", "s": "Gyms & fitness (no yoga)", "x": -0.2372, "y": -0.1674, "e": 1}, {"n": "Hyatt House Dallas/Las Colinas", "s": "Hotels", "x": -0.1504, "y": 0.2572, "e": 0}, {"n": "Darling Ingredients Inc.", "s": "Offices & corporate", "x": -0.2987, "y": -0.069, "e": 0}, {"n": "Frontline Source Group", "s": "Offices & corporate", "x": -0.3142, "y": -0.0248, "e": 1}, {"n": "Westridge Office Center", "s": "Offices & corporate", "x": -0.3133, "y": -0.0426, "e": 0}, {"n": "Chase Bank", "s": "Offices & corporate", "x": -0.2379, "y": -0.21, "e": 1}, {"n": "Chase Home Lending", "s": "Offices & corporate", "x": -0.2373, "y": -0.2107, "e": 1}, {"n": "Benihana - Las Colinas (Irving)", "s": "Restaurants & cafes", "x": -0.0115, "y": -0.3181, "e": 1}, {"n": "Railpros HQ", "s": "Offices & corporate", "x": -0.3185, "y": -0.0226, "e": 0}, {"n": "Flint Consulting Group", "s": "Medical, chiro, PT, dental", "x": -0.3103, "y": -0.0756, "e": 0}, {"n": "DFW IT Partner LLC", "s": "Offices & corporate", "x": -0.3188, "y": -0.0158, "e": 1}, {"n": "Regus - Irving - Las Colinas MacArthur", "s": "Salons, spas, massage", "x": -0.3218, "y": -0.016, "e": 0}, {"n": "Halomedicals USA", "s": "Offices & corporate", "x": -0.323, "y": -0.0185, "e": 0}, {"n": "Flores Auto Insurance", "s": "Offices & corporate", "x": -0.323, "y": -0.0185, "e": 0}, {"n": "The Praesidium Law Firm, LLC", "s": "Offices & corporate", "x": -0.3232, "y": -0.0163, "e": 1}, {"n": "Rhombus Canvas LLC", "s": "Offices & corporate", "x": -0.323, "y": -0.0185, "e": 0}, {"n": "TEXAS 2 SUCCESS INC", "s": "Offices & corporate", "x": -0.323, "y": -0.0185, "e": 1}, {"n": "PEN Software Inc.", "s": "Offices & corporate", "x": -0.323, "y": -0.0185, "e": 0}, {"n": "BKM Management Company", "s": "Apartments, HOA, property", "x": -0.3268, "y": -0.0134, "e": 1}, {"n": "Women's Business Council - Southwest", "s": "Offices & corporate", "x": -0.3262, "y": -0.0132, "e": 0}, {"n": "Churchill Residential", "s": "Apartments, HOA, property", "x": -0.3262, "y": -0.0132, "e": 1}, {"n": "Infinity Healthcare Solutions, LLC", "s": "Medical, chiro, PT, dental", "x": -0.326, "y": -0.0132, "e": 0}, {"n": "BestMex", "s": "Offices & corporate", "x": -0.3268, "y": -0.0134, "e": 1}, {"n": "Yi Law Group", "s": "Offices & corporate", "x": -0.3268, "y": -0.0134, "e": 0}, {"n": "Hajjar Peters, LLP Dallas Office", "s": "Offices & corporate", "x": -0.326, "y": -0.0132, "e": 1}, {"n": "Harrison-Donaldson, Attorney at Law", "s": "Offices & corporate", "x": -0.3268, "y": -0.0134, "e": 0}, {"n": "Miller Equity Capitol Advisors", "s": "Offices & corporate", "x": -0.3262, "y": -0.0132, "e": 0}, {"n": "PEACH CAPITAL INC", "s": "Offices & corporate", "x": -0.3268, "y": -0.0134, "e": 0}, {"n": "Edward Jones - Financial Advisor: Andy Polanco", "s": "Offices & corporate", "x": -0.3267, "y": -0.0106, "e": 1}, {"n": "99DigitalWeb", "s": "Offices & corporate", "x": -0.326, "y": -0.0132, "e": 0}, {"n": "Neutrosys Inc", "s": "Offices & corporate", "x": -0.3268, "y": -0.0134, "e": 0}, {"n": "N2Force Technologies Inc", "s": "Offices & corporate", "x": -0.326, "y": -0.0132, "e": 0}, {"n": "Sonatafy Technology", "s": "Offices & corporate", "x": -0.3268, "y": -0.0134, "e": 1}, {"n": "Alletec USA Inc", "s": "Offices & corporate", "x": -0.3268, "y": -0.0134, "e": 1}, {"n": "Virtual Interviewers", "s": "Offices & corporate", "x": -0.326, "y": -0.0132, "e": 0}, {"n": "Sparta Systems, Inc - Texas Office", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Rocket Pediatric Therapy", "s": "Medical, chiro, PT, dental", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Northwestern Mutual - Las Colinas", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Medicare Advantage Plans", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Clyde & Co", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Marx, Altman & Johnson", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Tillman Batchelor LLP", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Dominic Dougherty - Advising For Life", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Jay Courtney, JJR Financial, Northwestern Mutual", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "JJR Financial", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Edward Jones - Financial Advisor: Ben Hopper, CE", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 1}, {"n": "Angela Denice Inc PBC", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Atmanica Technologies LLC", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 0}, {"n": "Steer Health", "s": "Offices & corporate", "x": -0.3274, "y": -0.0129, "e": 1}, {"n": "Simlin Bobbie", "s": "Medical, chiro, PT, dental", "x": -0.23, "y": -0.2399, "e": 0}, {"n": "Barany Linda", "s": "Medical, chiro, PT, dental", "x": -0.23, "y": -0.2399, "e": 0}, {"n": "Infinity Exploration", "s": "Offices & corporate", "x": -0.3343, "y": -0.0135, "e": 0}, {"n": "MinuteClinic at CVS", "s": "Medical, chiro, PT, dental", "x": -0.23, "y": -0.2422, "e": 0}, {"n": "CVS Pharmacy", "s": "Medical, chiro, PT, dental", "x": -0.23, "y": -0.2422, "e": 0}, {"n": "Elemental Methods LLC", "s": "Offices & corporate", "x": -0.3353, "y": -0.0072, "e": 0}, {"n": "Ample IT Services LLC", "s": "Offices & corporate", "x": -0.3366, "y": -0.008, "e": 0}, {"n": "CapinCrouse", "s": "Offices & corporate", "x": -0.3366, "y": -0.008, "e": 0}, {"n": "Gabriel Roeder Smith & Co", "s": "Offices & corporate", "x": -0.3366, "y": -0.008, "e": 0}, {"n": "Heeddata Inc", "s": "Offices & corporate", "x": -0.2901, "y": 0.1718, "e": 0}, {"n": "TownePlace Suites by Marriott Dallas Las Colinas", "s": "Gyms & fitness (no yoga)", "x": -0.1037, "y": -0.3219, "e": 0}, {"n": "Comfort Inn & Suites Irving Las Colinas DFW", "s": "Hotels", "x": 0.0273, "y": -0.3383, "e": 0}, {"n": "Avis Car Rental", "s": "Offices & corporate", "x": 0.0263, "y": -0.3383, "e": 0}, {"n": "Pro Active Insurance TX", "s": "Offices & corporate", "x": -0.342, "y": -0.0029, "e": 1}, {"n": "Hampton Inn Dallas-Irving-Las Colinas", "s": "Gyms & fitness (no yoga)", "x": 0.0717, "y": -0.3361, "e": 0}, {"n": "CVS", "s": "Retail", "x": -0.2343, "y": -0.251, "e": 0}, {"n": "Residence Inn by Marriott Dallas Las Colinas", "s": "Gyms & fitness (no yoga)", "x": -0.1627, "y": -0.3144, "e": 0}, {"n": "American Concrete Pipe Association", "s": "Offices & corporate", "x": -0.3148, "y": -0.1958, "e": 0}, {"n": "Macarthur Plaza", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 0}, {"n": "Weidner Apartment Homes- Texas DFW", "s": "Apartments, HOA, property", "x": -0.3147, "y": -0.1957, "e": 0}, {"n": "Servitas", "s": "Medical, chiro, PT, dental", "x": -0.3148, "y": -0.1957, "e": 0}, {"n": "Riya - The Travel Expert (Dallas)", "s": "Offices & corporate", "x": -0.3148, "y": -0.1958, "e": 1}, {"n": "Porter & Company CPAs", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 0}, {"n": "Timothy DeVolt and Company", "s": "Offices & corporate", "x": -0.3148, "y": -0.1958, "e": 0}, {"n": "Elektra USA", "s": "Offices & corporate", "x": -0.3148, "y": -0.1958, "e": 0}, {"n": "Logix Sales & Marketing", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 1}, {"n": "ComTec Information Systems", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 0}, {"n": "Global Bridge InfoTech Inc,.", "s": "Offices & corporate", "x": -0.3147, "y": -0.1957, "e": 0}, {"n": "Tek Dallas INC", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 1}, {"n": "Cloud Resources", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 0}, {"n": "Motivity Labs Inc", "s": "Offices & corporate", "x": -0.3148, "y": -0.1958, "e": 1}, {"n": "Avior Inc.", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 0}, {"n": "VisorSoft Consulting Corp", "s": "Offices & corporate", "x": -0.3148, "y": -0.1958, "e": 0}, {"n": "Romack Staffing International", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 0}, {"n": "Prosper Med Staff LLC", "s": "Offices & corporate", "x": -0.3148, "y": -0.1958, "e": 0}, {"n": "Direct Recruit Group", "s": "Offices & corporate", "x": -0.3148, "y": -0.1957, "e": 1}, {"n": "Podkast Plus", "s": "Retail", "x": -0.3158, "y": -0.1977, "e": 1}, {"n": "PNC Macarthur Plaza", "s": "Offices & corporate", "x": -0.3184, "y": -0.1971, "e": 0}, {"n": "Transwestern", "s": "Apartments, HOA, property", "x": -0.3183, "y": -0.1971, "e": 1}, {"n": "Cooksey Communications Inc", "s": "Offices & corporate", "x": -0.3183, "y": -0.1971, "e": 0}, {"n": "US Tech Solutions", "s": "Offices & corporate", "x": -0.3183, "y": -0.1971, "e": 0}, {"n": "HNJ Inc", "s": "Retail", "x": -0.3183, "y": -0.1971, "e": 0}, {"n": "Dracko Agency", "s": "Offices & corporate", "x": -0.3174, "y": -0.1981, "e": 0}, {"n": "LocalLink 360\u00b0", "s": "Offices & corporate", "x": -0.3183, "y": -0.1971, "e": 0}, {"n": "Romack Inc", "s": "Offices & corporate", "x": -0.3183, "y": -0.1971, "e": 1}, {"n": "Pro-Tek Consulting", "s": "Offices & corporate", "x": -0.3194, "y": -0.1976, "e": 1}, {"n": "Care Continuity", "s": "Offices & corporate", "x": -0.3194, "y": -0.1976, "e": 0}, {"n": "Staffmnark", "s": "Offices & corporate", "x": -0.3194, "y": -0.1976, "e": 0}, {"n": "Fuzzy's Taco Shop", "s": "Restaurants & cafes", "x": -0.3709, "y": 0.103, "e": 0}, {"n": "Budget Suites of America", "s": "Apartments, HOA, property", "x": 0.1476, "y": -0.3576, "e": 0}, {"n": "Pokemoto Irving", "s": "Restaurants & cafes", "x": 0.2209, "y": -0.3174, "e": 1}, {"n": "Elite Care Clinic", "s": "Medical, chiro, PT, dental", "x": -0.2803, "y": 0.2695, "e": 0}, {"n": "JAR", "s": "Apartments, HOA, property", "x": 0.0631, "y": 0.3838, "e": 0}, {"n": "Pragathi Tiffins", "s": "Restaurants & cafes", "x": 0.2211, "y": -0.3255, "e": 0}, {"n": "Estrong Marketing", "s": "Offices & corporate", "x": 0.1812, "y": 0.3496, "e": 1}, {"n": "HQ Cottonwood Valley", "s": "Salons, spas, massage", "x": -0.3937, "y": -0.0414, "e": 0}, {"n": "Figure Technology Solutions", "s": "Offices & corporate", "x": -0.3937, "y": -0.0414, "e": 0}, {"n": "Bush & Bush Law Group", "s": "Offices & corporate", "x": -0.3937, "y": -0.0414, "e": 0}, {"n": "Asare Legal, PLLC", "s": "Offices & corporate", "x": -0.3937, "y": -0.0414, "e": 1}, {"n": "Mingle Law PLLC", "s": "Offices & corporate", "x": -0.3937, "y": -0.0414, "e": 1}, {"n": "Edward Jones - Financial Advisor: Michael P Seib", "s": "Offices & corporate", "x": -0.3929, "y": -0.0442, "e": 1}, {"n": "TrueSpot", "s": "Offices & corporate", "x": -0.3937, "y": -0.0414, "e": 0}, {"n": "The Shams Group", "s": "Offices & corporate", "x": -0.3937, "y": -0.0414, "e": 1}, {"n": "i Fratelli Corporate Office", "s": "Offices & corporate", "x": -0.394, "y": -0.0441, "e": 0}, {"n": "Medix", "s": "Offices & corporate", "x": -0.394, "y": -0.0441, "e": 0}, {"n": "Valora Medical Group Headquarters", "s": "Medical, chiro, PT, dental", "x": -0.394, "y": -0.0441, "e": 0}, {"n": "Edward Jones - Financial Advisor: Justin Montana", "s": "Offices & corporate", "x": -0.394, "y": -0.0441, "e": 1}, {"n": "LINK Staffing", "s": "Offices & corporate", "x": -0.394, "y": -0.0441, "e": 0}, {"n": "HireWorks", "s": "Offices & corporate", "x": -0.394, "y": -0.0441, "e": 0}, {"n": "Mission Foods, Inc.", "s": "Gyms & fitness (no yoga)", "x": -0.3955, "y": -0.0417, "e": 0}, {"n": "Tibet Tiffin", "s": "Restaurants & cafes", "x": 0.2405, "y": -0.3174, "e": 0}, {"n": "Gruma Corporation", "s": "Restaurants & cafes", "x": -0.3976, "y": -0.0417, "e": 0}, {"n": "Jefferson Place", "s": "Apartments, HOA, property", "x": 0.1167, "y": 0.3851, "e": 0}, {"n": "MOURI Tech", "s": "Offices & corporate", "x": -0.2982, "y": 0.271, "e": 0}, {"n": "TI Communities", "s": "Apartments, HOA, property", "x": -0.3781, "y": -0.1426, "e": 1}, {"n": "7-Eleven", "s": "Retail", "x": -0.241, "y": -0.3261, "e": 0}, {"n": "MicroAI", "s": "Offices & corporate", "x": 0.06, "y": -0.4027, "e": 0}, {"n": "Plasma", "s": "Offices & corporate", "x": 0.06, "y": -0.4027, "e": 1}, {"n": "Mgheath Advisory LLC", "s": "Offices & corporate", "x": -0.384, "y": -0.1415, "e": 1}, {"n": "Infrability", "s": "Offices & corporate", "x": -0.3048, "y": -0.2765, "e": 0}, {"n": "Fidelity National Title", "s": "Offices & corporate", "x": -0.3897, "y": -0.1404, "e": 1}, {"n": "INFOLOB Global, Inc.", "s": "Offices & corporate", "x": -0.3277, "y": 0.2552, "e": 0}, {"n": "Virtue Group", "s": "Offices & corporate", "x": -0.3274, "y": 0.2593, "e": 0}, {"n": "Indus River Technologies Inc", "s": "Offices & corporate", "x": -0.3274, "y": 0.2593, "e": 0}, {"n": "Firestone Complete Auto Care", "s": "Retail", "x": -0.2386, "y": -0.3443, "e": 1}, {"n": "Hyatt Place Dallas / Las Colinas", "s": "Hotels", "x": 0.2402, "y": -0.3487, "e": 0}, {"n": "PSBP Law", "s": "Offices & corporate", "x": -0.401, "y": -0.1408, "e": 0}, {"n": "Jefferson Creek", "s": "Apartments, HOA, property", "x": -0.0329, "y": 0.4294, "e": 0}, {"n": "Skyrise School of Las Colinas", "s": "Schools, daycare, university", "x": -0.4259, "y": 0.0968, "e": 1}, {"n": "Quality Suites Irving-Las Colinas", "s": "Gyms & fitness (no yoga)", "x": -0.4321, "y": 0.0631, "e": 0}, {"n": "Pioneer Tech", "s": "Offices & corporate", "x": 0.2939, "y": -0.3236, "e": 0}, {"n": "Skyline sr22 insurance Irving", "s": "Offices & corporate", "x": -0.3128, "y": -0.3204, "e": 0}, {"n": "Savera Indian Kitchen", "s": "Restaurants & cafes", "x": -0.3163, "y": -0.3162, "e": 0}, {"n": "Courtyard by Marriott Dallas Las Colinas", "s": "Gyms & fitness (no yoga)", "x": -0.3871, "y": -0.25, "e": 0}, {"n": "Mary's Beauty Hair Salon", "s": "Salons, spas, massage", "x": -0.3204, "y": -0.3351, "e": 0}, {"n": "The Montgomery", "s": "Apartments, HOA, property", "x": -0.2081, "y": -0.4158, "e": 0}, {"n": "Las Colinas", "s": "Apartments, HOA, property", "x": 0.0302, "y": 0.466, "e": 0}, {"n": "VisionPath", "s": "Apartments, HOA, property", "x": -0.1711, "y": -0.4355, "e": 0}, {"n": "The Bistro - Eat. Drink. Connect.\u00ae", "s": "Restaurants & cafes", "x": -0.4072, "y": -0.2352, "e": 0}, {"n": "Best Western Plus Las Colinas Inn & Suites", "s": "Gyms & fitness (no yoga)", "x": 0.3366, "y": -0.3424, "e": 0}, {"n": "Bajeko Sekuwa", "s": "Restaurants & cafes", "x": -0.3831, "y": -0.311, "e": 0}, {"n": "Sarigama Indian Cafe", "s": "Restaurants & cafes", "x": -0.3318, "y": -0.3672, "e": 0}, {"n": "SaRiGaMa Indian Supermarket & Halal Meat", "s": "Retail", "x": -0.3342, "y": -0.3656, "e": 0}, {"n": "ANCR Risk", "s": "Offices & corporate", "x": 0.3792, "y": -0.3223, "e": 0}, {"n": "Flavors Indian Kitchen", "s": "Restaurants & cafes", "x": -0.3828, "y": -0.3207, "e": 1}];</script><script>const PTS = window.PTS;
+const SEG = {
+  "Offices & corporate": "#FFD700",
+  "Restaurants & cafes": "#ff8a5c",
+  "Medical, chiro, PT, dental": "#5cc8ff",
+  "Apartments, HOA, property": "#b48cff",
+  "Salons, spas, massage": "#ff6fb5",
+  "Gyms & fitness (no yoga)": "#3ddc84",
+  "Retail": "#c7c7c7",
+  "Schools, daycare, university": "#ffd27a",
+  "Hotels": "#7af0e0",
+  "Churches & nonprofits": "#9aa", "Other": "#777"
+};
+const $ = s => document.querySelector(s);
+const fmt = n => n.toLocaleString("en-US");
+
+/* ---------- MAP ---------- */
+const svg = $("#map"), W = 520, R_MI = 0.55, sc = (W/2 - 20) / R_MI, C = W/2;
+const ns = "http://www.w3.org/2000/svg";
+function el(t, a, p = svg) { const e = document.createElementNS(ns, t); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+const defs = el("defs", {});
+defs.innerHTML = `<radialGradient id="glow"><stop offset="0" stop-color="#FFD700" stop-opacity=".35"/><stop offset="1" stop-color="#FFD700" stop-opacity="0"/></radialGradient>
+<linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3ddc84" stop-opacity="0"/><stop offset="1" stop-color="#3ddc84" stop-opacity=".35"/></linearGradient>`;
+for (let i = -6; i <= 6; i++) { el("line", { x1: C + i*40, y1: 0, x2: C + i*40, y2: W, class: "grid" }); el("line", { y1: C + i*40, x1: 0, y2: C + i*40, x2: W, class: "grid" }); }
+[[0.5, "0.5 mi · trial"], [0.25, "0.25 mi"]].forEach(([r, l]) => { el("circle", { cx: C, cy: C, r: r*sc, class: "ring" }); const t = el("text", { x: C + 6, y: C - r*sc - 6, class: "ringlbl" }); t.textContent = l; });
+el("circle", { cx: C, cy: C, r: 0.5*sc, fill: "url(#glow)", opacity: .25 });
+const sweepG = el("g", { class: "sweep" });
+el("path", { d: `M${C},${C} L${C + 0.53*sc},${C} A${0.53*sc},${0.53*sc} 0 0,0 ${C + 0.53*sc*Math.cos(-0.6)},${C + 0.53*sc*Math.sin(-0.6)} Z`, fill: "url(#sweep)" }, sweepG);
+const dotsG = el("g", {});
+el("circle", { cx: C, cy: C, r: 16, class: "pinpulse" });
+el("circle", { cx: C, cy: C, r: 7, fill: "#FFD700", stroke: "#000", "stroke-width": 2 });
+const pl = el("text", { x: C + 12, y: C + 22, class: "pinlbl" }); pl.textContent = "ALIVE Las Colinas · 975 W John Carpenter Fwy";
+
+const order = PTS.map((p, i) => ({ ...p, i, a: Math.atan2(p.y, p.x) })).sort((a, b) => Math.hypot(a.x, a.y) - Math.hypot(b.x, b.y));
+let found = 0;
+function addDot(p) {
+  const c = el("circle", { cx: C + p.x*sc, cy: C - p.y*sc, r: 0, fill: SEG[p.s] || "#777", class: "dot" }, dotsG);
+  requestAnimationFrame(() => c.setAttribute("r", p.e ? 4.2 : 3));
+  const t = document.createElementNS(ns, "title"); t.textContent = `${p.n} — ${p.s}`; c.appendChild(t);
+}
+
+/* ---------- SEGMENTS (REAL) ---------- */
+const segCounts = {}; PTS.forEach(p => segCounts[p.s] = (segCounts[p.s] || 0) + 1);
+const segList = Object.entries(segCounts).sort((a, b) => b[1] - a[1]);
+$("#segs").innerHTML = segList.map(([s, n]) => `<div class="seg"><span class="sw" style="background:${SEG[s]||'#777'}"></span><span class="sn">${s}</span><span class="bar"><i style="width:${n/segList[0][1]*100}%;background:${SEG[s]||'#777'}"></i></span><b>${n}</b></div>`).join("");
+
+/* ---------- PIPELINE ---------- */
+const STAGES = [
+  ["Scrape area", "Google Maps + web · widening ring", 217, 217, "real"],
+  ["Enrich & validate", "Address, phone, email, IG/LinkedIn", 217, 216, "real"],
+  ["Mailer proofs generated", "Personalized 4x6 per business", 217, 0, "Batch of 40/day"],
+  ["Approval request", "Studio manager · Slack / WhatsApp", 217, 0, "Yes / no per batch"],
+  ["Approved", "Only approved rows move on", 217, 0, ""],
+  ["Mailers sent", "PostGrid / Lob · First Class", 216, 0, "Cap 40/day"],
+  ["Light cold email", "3–4 touches · 2–3 people max per company", 55, 0, "Cap 30/inbox/day"],
+  ["Holiday sequence", "Thanksgiving · New Year · New-You Jan", 55, 0, "1 touch / holiday"],
+  ["Light SMS", "Business lines & replies only", 60, 0, "Cap 15/day"],
+  ["Ad retargeting audience", "These exact businesses & people", 217, 0, "Synced nightly"],
+  ["Light ringless voicemail", "One drop, after mailer lands", 120, 0, "Cap 20/day"],
+  ["Light outbound AI calls", "Front desk → right person", 120, 0, "Cap 15/day"],
+  ["Inbound calls handled by AI", "Books team classes 24/7", 30, 0, "Always on"],
+];
+const pipe = $("#pipe");
+pipe.innerHTML = STAGES.map((s, i) => `<div class="st" id="st${i}"><div class="sti">${i+1}</div><div class="stb"><div class="stt">${s[0]} ${s[4]==="real"?'<span class="tag real">REAL</span>':''}</div><div class="std">${s[1]}</div><div class="prog"><i></i></div></div><div class="stn"><b>0</b><small>${s[4]==="real"?"":s[4]}</small></div></div>`).join("");
+const val = STAGES.map(() => 0);
+function setStage(i, v) {
+  val[i] = Math.min(v, STAGES[i][2]);
+  const n = document.querySelector(`#st${i} .stn b`); n.textContent = fmt(Math.round(val[i]));
+  document.querySelector(`#st${i} .prog i`).style.width = (val[i] / STAGES[i][2] * 100) + "%";
+}
+function pulse(i) { const e = $("#st" + i); e.classList.remove("hot"); void e.offsetWidth; e.classList.add("hot"); }
+
+/* ---------- KPIs ---------- */
+const K = { found: 0, valid: 0, emails: 0, approved: 0, mailed: 0, replies: 0, meetings: 0, members: 0 };
+function renderK() { for (const k in K) { const e = $("#k_" + k); if (e) e.textContent = fmt(Math.round(K[k])); } }
+
+/* ---------- FEED ---------- */
+const feed = $("#feed");
+function log(icon, txt, tone = "") {
+  const t = new Date(); const ts = t.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", second: "2-digit" });
+  const d = document.createElement("div"); d.className = "ev " + tone; d.innerHTML = `<span class="ic">${icon}</span><span class="tx">${txt}</span><span class="ts">${ts}</span>`;
+  feed.prepend(d); while (feed.children.length > 40) feed.lastChild.remove();
+}
+const pick = a => a[Math.floor(Math.random() * a.length)];
+
+/* ---------- APPROVAL MOCK ---------- */
+let batch = 1, approvedRows = 0, pendingBatch = false;
+function showApproval() {
+  pendingBatch = true;
+  const sample = order.slice((batch-1)*40, batch*40);
+  const segMix = {}; sample.forEach(p => segMix[p.s] = (segMix[p.s]||0)+1);
+  const mix = Object.entries(segMix).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([s,n])=>`${n} ${s.split(",")[0].toLowerCase()}`).join(" · ");
+  $("#apbody").innerHTML = `<b>Batch #${batch}</b> is ready: <b>${sample.length} businesses</b> within ${batch<=2?"0.25":"0.5"} mi (${mix}).<br>Mailer: <i>"Neighbor perk: a free class for your team."</i> Est. postage <b>$${(sample.length*0.9).toFixed(2)}</b>.<br><span class="muted">Nothing goes out until you approve.</span>`;
+  $("#approval").classList.add("show"); $("#apstate").textContent = "Waiting on Studio Manager…";
+  $("#apstate").className = "apstate wait";
+  log("🟡", `Approval request sent to Studio Manager (Slack) — Batch #${batch}, ${sample.length} businesses`, "warn");
+  pulse(3);
+  clearTimeout(window._auto); window._auto = setTimeout(() => decide(true, true), 9000);
+}
+function decide(ok, auto) {
+  if (!pendingBatch) return; pendingBatch = false; clearTimeout(window._auto);
+  const n = Math.min(40, 217 - approvedRows);
+  if (ok) {
+    approvedRows += n; K.approved = approvedRows; setStage(4, approvedRows); pulse(4);
+    $("#apstate").textContent = `✅ Approved by Studio Manager${auto ? " (demo auto-approve)" : ""}`; $("#apstate").className = "apstate ok";
+    log("✅", `Batch #${batch} approved — ${n} mailers queued for PostGrid (First Class)`, "ok");
+    queueMail += n;
+  } else {
+    $("#apstate").textContent = "⛔ Rejected — agent will revise the batch"; $("#apstate").className = "apstate no";
+    log("⛔", `Batch #${batch} rejected — agent revising copy & targets`, "bad");
+  }
+  batch++;
+  setTimeout(() => { $("#approval").classList.remove("show"); }, 2600);
+}
+$("#btnApprove").onclick = () => decide(true, false);
+$("#btnReject").onclick = () => decide(false, false);
+
+/* ---------- SIM LOOP ---------- */
+let queueMail = 0, mailedToday = 0, emailsToday = 0, callsToday = 0, smsToday = 0, rvmToday = 0, day = 1;
+const caps = { mail: 40, email: 90, call: 15, sms: 15, rvm: 20 };
+function capsUI() {
+  const set = (id, v, c) => { $("#c_"+id).textContent = `${v}/${c}`; $("#cb_"+id).style.width = (v/c*100) + "%"; };
+  set("mail", mailedToday, caps.mail); set("email", emailsToday, caps.email); set("call", callsToday, caps.call); set("sms", smsToday, caps.sms); set("rvm", rvmToday, caps.rvm);
+  $("#dayn").textContent = day;
+}
+let phase = "scrape";
+function tick() {
+  if (phase === "scrape") {
+    for (let k = 0; k < 5 && found < order.length; k++) {
+      const p = order[found++]; addDot(p); K.found = found;
+      if (Math.random() < .25) log("📍", `Found <b>${p.n}</b> · ${p.s}`, "");
+    }
+    setStage(0, found); pulse(0);
+    K.valid = Math.min(216, Math.round(found * 216/217)); setStage(1, K.valid);
+    K.emails = Math.round(found * 55/217);
+    setStage(2, Math.round(found*0.98));
+    if (found >= order.length) {
+      phase = "run"; setStage(1, 216); K.valid = 216; K.emails = 55; setStage(2, 217);
+      log("🧾", "Validated 216 mailing addresses · 55 emails · 80 Instagram/LinkedIn (real trial data)", "ok");
+      log("🖨️", "217 mailer proofs generated (personalized front + back)", "");
+      setTimeout(showApproval, 1200);
+    }
+  } else {
+    // steady paced work
+    if (queueMail > 0 && mailedToday < caps.mail) { const m = Math.min(queueMail, 1 + Math.floor(Math.random()*3)); queueMail -= m; mailedToday += m; K.mailed += m; setStage(5, K.mailed); pulse(5); if (Math.random()<.4) log("📬", `${m} postcard${m>1?"s":""} handed to USPS (First Class) · ${pick(order).n}`, ""); }
+    const r = Math.random();
+    if (K.mailed > 20 && r < .35 && emailsToday < caps.email) { emailsToday++; setStage(6, Math.min(55, val[6] + .5)); pulse(6); if (Math.random()<.35) log("✉️", `Email touch ${1+Math.floor(Math.random()*3)} → office manager at <b>${pick(order.filter(p=>p.e)).n}</b>`, ""); }
+    else if (K.mailed > 40 && r < .45 && smsToday < caps.sms) { smsToday++; setStage(8, val[8] + 1); pulse(8); log("💬", "Light SMS: “Did the team get our postcard? Free class link inside.”", ""); }
+    else if (K.mailed > 40 && r < .55 && rvmToday < caps.rvm) { rvmToday++; setStage(10, val[10] + 1); pulse(10); log("📳", `Ringless voicemail dropped · ${pick(order).n}`, ""); }
+    else if (K.mailed > 60 && r < .63 && callsToday < caps.call) { callsToday++; setStage(11, val[11] + 1); pulse(11); log("📞", `AI call → front desk at <b>${pick(order).n}</b>: asked for team-perks contact`, ""); }
+    else if (K.mailed > 60 && r < .67) { setStage(12, val[12] + 1); pulse(12); K.replies++; log("☎️", "Inbound call answered by AI · booked a free team class (Thu 12:00)", "ok"); K.meetings++; }
+    else if (K.mailed > 30 && r < .72) { K.replies++; log("↩️", `Reply: “${pick(["We'd love a team class for ~15 people.","Can our whole floor come on a Friday?","Forwarding to our HR lead, she runs wellness.","Do you do a corporate rate for 40 employees?","Our residents would love this, can we talk?","Yes, send the free class link."])}” · ${pick(order.filter(p=>p.e||p.s.startsWith("Offices"))).n}`, "ok"); if (Math.random()<.6){K.meetings++; log("📅","Meeting booked on ALIVE calendar · corporate wellness pass","ok");} }
+    if (K.mailed > 0) { setStage(9, Math.min(217, approvedRows)); }
+    if (K.mailed > 50) setStage(7, Math.min(55, val[7] + .15));
+    if (K.meetings > 2 && Math.random() < .05) { K.members++; log("🧘", "New member from a partner business (trial → $119/mo)", "ok"); }
+    if (!pendingBatch && approvedRows < 217 && queueMail === 0 && Math.random() < .25) showApproval();
+    // end of day roll
+    if (mailedToday >= caps.mail || (queueMail === 0 && Math.random() < .03)) {
+      if (Math.random() < .3) { day++; mailedToday = emailsToday = callsToday = smsToday = rvmToday = 0; log("🌙", `Day ${day}: daily caps reset — pacing keeps it steady, never a blast`, "muted"); }
+    }
+  }
+  renderK(); capsUI();
+}
+(function loop(){ tick(); setTimeout(loop, phase === 'scrape' ? 450 : 1000); })();
+renderK(); capsUI();
+log("🟢", "ALIVE Growth Agent online · own computer · scanning 0.5 mi around Las Colinas", "ok");
+
+/* ---------- CLONE ---------- */
+document.querySelectorAll(".clone").forEach(b => b.onclick = () => {
+  if (b.dataset.s) return; b.dataset.s = 1; const city = b.dataset.city;
+  b.innerHTML = `<span class="spin"></span> Cloning agent to ${city}…`; b.classList.add("busy");
+  log("🧬", `Cloning ALIVE Growth Agent → ${city} (same playbook, new radius)`, "");
+  setTimeout(() => { b.innerHTML = `✓ ${city} agent live · awaiting first batch approval`; b.classList.remove("busy"); b.classList.add("done"); log("🟢", `${city} agent online · scraping 0.25 mi ring`, "ok"); }, 3200);
+});
+
+/* clock */
+setInterval(() => { $("#clock").textContent = new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", second: "2-digit" }); }, 1000);
+</script>
+</body></html>
